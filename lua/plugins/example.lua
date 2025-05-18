@@ -1,6 +1,41 @@
 -- since this is just an example spec, don't actually load anything here and return an empty spec
 -- stylua: ignore
-if true then return {} end
+if true then return {
+  { import = "lazyvim.plugins.extras.lang.typescript" },
+  {
+    "nvim-treesitter/nvim-treesitter",
+    opts = {
+      ensure_installed = {
+        "javascript",
+        "typescript",
+        "tsx",
+        "bash",
+        "html",
+        "json",
+        "lua",
+        "markdown",
+        "markdown_inline",
+        "python",
+        "regex",
+        "vim",
+        "yaml",
+      },
+    },
+  },
+  {
+    "williamboman/mason.nvim",
+    opts = {
+      ensure_installed = {
+        "stylua",
+        "shellcheck",
+        "shfmt",
+        "flake8",
+        "prettier",
+        "ts_ls"
+      },
+    },
+  },
+} end
 
 -- every spec file under the "plugins" directory will be loaded automatically by lazy.nvim
 --
