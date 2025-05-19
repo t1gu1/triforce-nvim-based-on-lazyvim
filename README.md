@@ -4,6 +4,8 @@ A starter template for [LazyVim](https://github.com/LazyVim/LazyVim).
 
 Refer to the [documentation](https://lazyvim.github.io/installation) to get started.
 
+<img width="1725" alt="image" src="https://github.com/user-attachments/assets/66091d13-0c43-4303-8bf2-f9546bed6100" />
+
 ## What I customized
 
 I simply try to keep a lot of the default LazyVim configuration, but I added some plugins and changed some keymaps to make it a bit more intuitive and faster with some extras for web development.
@@ -32,3 +34,7 @@ I simply try to keep a lot of the default LazyVim configuration, but I added som
   - `<leader><S-tab>c`: Close left buffers
 - Additional keymaps to move up and down a line
 - Removed markdown `MD013` rule that limits README lines to 80 characters
+
+### Another image
+
+<img width="1725" alt="image" src="https://github.com/user-attachments/assets/ff2717a7-fa87-4aba-b482-8ff5e7c30efd" />
