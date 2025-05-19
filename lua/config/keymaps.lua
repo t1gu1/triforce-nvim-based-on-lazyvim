@@ -12,13 +12,17 @@ for id = 1, 9 do
 end
 
 -- Search
-map("n", "<leader>fw", function()
+map({ "n", "v" }, "<leader>ff", function()
+  Snacks.picker.files({ hidden = true })
+end, { desc = "Find a file in the project" })
+
+map({ "n", "v" }, "<leader>fw", function()
   Snacks.picker.grep({ regex = false, hidden = true })
 end, { desc = "Find a words / text in the project" })
 
-map("n", "<leader>fw", function()
-  Snacks.picker.files({ hidden = true })
-end, { desc = "Find a file in the project" })
+map({ "n", "v" }, "<leader>ft", function()
+  vim.api.nvim_feedkeys(" st", "m", false)
+end, { desc = "Find TODO in the project" })
 
 -- Explorer
 
