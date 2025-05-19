@@ -2,15 +2,35 @@
 
 local map = vim.keymap.set
 
+-- A general {ActionNumber} that can be used in functions (Like the terminal)
+local actionNumber = 1
+
+for id = 1, 9 do
+  map("n", id .. "", function()
+    actionNumber = id
+  end, { desc = "Set action number to #" .. id })
+end
+
+-- Search
+map("n", "<leader>fw", function()
+  Snacks.picker.grep({ regex = false, hidden = true })
+end, { desc = "Find a words / text in the project" })
+
+map("n", "<leader>fw", function()
+  Snacks.picker.files({ hidden = true })
+end, { desc = "Find a file in the project" })
+
 -- Explorer
+
+--- Method used in the 2 shortcuts
 function ExplorerToggle()
   Snacks.explorer.open({
     path = LazyVim.root(),
     auto_close = true,
     layout = {
-      preset = "ivy",
-      preview = true,
-      layout = { position = "right", width = 120 },
+      preset = "vscode",
+      preview = false, -- Preview already visible in find file (<leader>ff) and find text (<leader>fw)
+      layout = { position = "right" },
     },
   })
 end
@@ -56,31 +76,16 @@ map("n", "<leader><tab>c", "<cmd>BufferLineCloseRight<cr>", { desc = "Close Othe
 map("n", "<leader><S-tab>c", "<cmd>BufferLineCloseLeft<cr>", { desc = "Close Other Tabs" })
 
 -- Terminal
-local actionNumber = 1
-
-map("n", "1", function()
-  actionNumber = 1
-end, { desc = "Set action number to 1" })
-map("n", "2", function()
-  actionNumber = 2
-end, { desc = "Set action number to 2" })
-map("n", "3", function()
-  actionNumber = 3
-end, { desc = "Set action number to 3" })
-map("n", "4", function()
-  actionNumber = 4
-end, { desc = "Set action number to 4" })
-
 map("n", "<c-/>", function()
-  print("Number: " .. actionNumber)
+  print("Open terminal #" .. actionNumber)
   Snacks.terminal
     .toggle(nil, { cwd = LazyVim.root(), win = { position = "float" }, env = { id = "term" .. actionNumber } })
     :add_padding()
-end, { desc = "Terminal float toggle base on action number" })
+end, { desc = "Terminal float toggle base on action number {actionNumber}" })
 
 map("n", "<c-\\>", function()
-  print("Number: " .. actionNumber)
+  print("Open terminal #" .. actionNumber)
   Snacks.terminal
     .toggle(nil, { cwd = LazyVim.root(), win = { position = "bottom" }, env = { id = "term" .. actionNumber } })
     :add_padding()
-end, { desc = "Terminal bottom toggle base on action number" })
+end, { desc = "Terminal bottom toggle base on action number {actionNumber}" })
