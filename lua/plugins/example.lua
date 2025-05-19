@@ -40,7 +40,6 @@ return {
         "html",
         "json",
         "lua",
-        "markdow",
         "markdown_inline",
         "python",
         "regex",
@@ -97,9 +96,8 @@ return {
           pick = nil,
           ---@type snacks.dashboard.Item[]
           keys = {
-            { icon = " ", key = "g", desc = "Projects", action = ":lua Snacks.dashboard.pick('projects')" },
+            { icon = " ", key = "p", desc = "Projects", action = ":lua Snacks.dashboard.pick('projects')" },
             { icon = " ", key = "s", desc = "Restore Session", section = "session" },
-            { icon = " ", key = "n", desc = "New File", action = ":ene | startinsert" },
             {
               icon = " ",
               key = "c",
