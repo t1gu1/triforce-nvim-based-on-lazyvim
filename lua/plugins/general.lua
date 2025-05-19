@@ -20,8 +20,8 @@ return {
               return capitalizedProjectName
             end,
           },
-          lualine_b = { "branch", "diff", "diagnostics" },
-          lualine_c = { "filename" },
+          lualine_b = { "branch", "diff" },
+          lualine_c = { "diagnostics" },
           lualine_x = { "encoding", "fileformat" },
           lualine_y = { "filetype" },
           lualine_z = { "progress" },
