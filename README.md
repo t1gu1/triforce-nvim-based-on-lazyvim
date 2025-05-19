@@ -6,24 +6,26 @@ Refer to the [documentation](https://lazyvim.github.io/installation) to get star
 
 ## What I customized
 
-I simply try to keep a lot of the default LazyVim configuration, but I added some plugins and changed some keymaps to make it a bit more intuitive and faster with some extra for web devellopement.
+I simply try to keep a lot of the default LazyVim configuration, but I added some plugins and changed some keymaps to make it a bit more intuitive and faster with some extras for web development.
 
-- Required Mason LSP and Treesitter plugin to devellop in web technologies (js, ts, tsx, jsx, etc)
-- Better terminal management! (If you press `2<c-/>`, it will always toggle the number `2` terminal with a simple `<c-/>` after)
-- Better and simpler lualine
-  - Add project name as the first element (projectName / gitranch / file)
-  - I remove some useless elements
-- Better dashboard that's more simple and can open project more quickly
-  - Cute cat as dashboard ASCII image
-- Better Explorer keymaps, fullscreen with preview
-  - `<leader>e` Open the explorer on the buffer file
-  - `<leader>E` Open the explorer on the root of the working directory with all folders closed
-  - In all case, the explorer will auto-close when going out of focus or when you select a file
-- Easier tabs/buffer management with keymaps on the `<tab>` key
-  - `<tab>` will move to the next buffer
-  - `<S-tab>` will move to the previous buffer
-  - `<leader><tab><tab>` will remove other buffers
-  - `<leader><tab>c` will close the rigth buffers
-  - `<leader><S-tab>c` will close the left buffers
-- Simply add more keymaps to move up and down a line
-- Remove markdown `MD013` that limit readme line to 80 characters
+- Requires Mason, LSP, and Treesitter plugins to develop in web technologies (JS, TS, TSX, JSX, etc.)
+- Improved terminal management:
+  - Press `2<c-/>` to toggle terminal 2, then `<c-/>` to toggle it again.
+- Simplified lualine:
+  - Project name as the first element (projectName / gitranch / file)
+  - Removed unnecessary elements
+- Streamlined dashboard:
+  - Simpler layout, faster project access
+  - Cute cat ASCII art
+- Enhanced explorer keymaps and fullscreen preview:
+  - `<leader>e`: Open explorer on buffer file
+  - `<leader>E`: Open explorer at project root with all folders closed
+  - Explorer auto-closes when unfocused or a file is selected
+- Easier tab/buffer management with `<tab>` keymaps:
+  - `<tab>`: Next buffer
+  - `<S-tab>`: Previous buffer
+  - `<leader><tab><tab>`: Remove other buffers
+  - `<leader><tab>c`: Close right buffers
+  - `<leader><S-tab>c`: Close left buffers
+- Additional keymaps to move up and down a line
+- Removed markdown `MD013` rule that limits README lines to 80 characters
