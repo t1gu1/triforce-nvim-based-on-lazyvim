@@ -44,3 +44,6 @@ I simply try to keep a lot of the default LazyVim configuration, but I added som
 ## Preview
 
 <img width="1725" alt="image" src="https://github.com/user-attachments/assets/ff2717a7-fa87-4aba-b482-8ff5e7c30efd" />
+
+<img width="1725" alt="image" src="https://github.com/user-attachments/assets/654d4cd6-a522-4fa8-9202-e98a4dca7d17" />
+
