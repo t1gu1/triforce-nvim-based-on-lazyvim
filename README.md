@@ -22,6 +22,8 @@ I simply try to keep a lot of the default LazyVim configuration, but I added som
   - `<leader>e`: Open explorer on buffer file
   - `<leader>E`: Open explorer at project root with all folders closed
   - Explorer auto-closes when unfocused or a file is selected
+- Classic `<leader>ff` and `<leader>fw` to search for files and words in the project
+  - Add `<leader>ft` in that logic to find TODO
 - Easier tab/buffer management with `<tab>` keymaps:
   - `<tab>`: Next buffer
   - `<S-tab>`: Previous buffer
