@@ -15,7 +15,7 @@ I simply try to keep a lot of the default LazyVim configuration, but I added som
   - Press `2<c-/>` to toggle terminal 2, then `<c-/>` to toggle it again.
 - Simplified lualine:
   - Project name as the first element (projectName / gitranch)
-  - Removed unnecessary elements like the name since it is already show as the buffer
+  - Removed unnecessary elements like the file name since it is already show as the buffer
 - Streamlined dashboard:
   - Simpler layout, faster project access
   - Cute cat ASCII art
