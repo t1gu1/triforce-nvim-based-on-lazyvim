@@ -10,7 +10,22 @@ return {
     event = "VeryLazy",
     opts = function()
       return {
-        --[[add your custom lualine config here]]
+        sections = {
+          lualine_a = {
+            function()
+              local projectName = vim.fn.getcwd():match("([^/]+)$")
+              local firstLetter = projectName:sub(1, 1)
+              local restOfString = projectName:sub(2)
+              local capitalizedProjectName = firstLetter:upper() .. restOfString
+              return capitalizedProjectName
+            end,
+          },
+          lualine_b = { "branch", "diff", "diagnostics" },
+          lualine_c = { "filename" },
+          lualine_x = { "encoding", "fileformat" },
+          lualine_y = { "filetype" },
+          lualine_z = { "progress" },
+        },
       }
     end,
   },
