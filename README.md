@@ -4,7 +4,7 @@ A starter template for [LazyVim](https://github.com/LazyVim/LazyVim).
 
 Refer to the [documentation](https://lazyvim.github.io/installation) to get started.
 
-<img width="1725" alt="image" src="https://github.com/user-attachments/assets/66091d13-0c43-4303-8bf2-f9546bed6100" />
+<img width="1725" alt="Dashboard" src="https://github.com/user-attachments/assets/66091d13-0c43-4303-8bf2-f9546bed6100" />
 
 ## What I customized
 
@@ -43,7 +43,8 @@ I simply try to keep a lot of the default LazyVim configuration, but I added som
 
 ## Preview
 
-<img width="1725" alt="image" src="https://github.com/user-attachments/assets/ff2717a7-fa87-4aba-b482-8ff5e7c30efd" />
+<img width="1725" alt="Explorer" src="https://github.com/user-attachments/assets/ff2717a7-fa87-4aba-b482-8ff5e7c30efd" />
 
-<img width="1725" alt="image" src="https://github.com/user-attachments/assets/654d4cd6-a522-4fa8-9202-e98a4dca7d17" />
+<img width="1725" alt="TSX" src="https://github.com/user-attachments/assets/654d4cd6-a522-4fa8-9202-e98a4dca7d17" />
 
+<img width="1725" alt="Lazygit" src="https://github.com/user-attachments/assets/d7f69086-6d66-4d45-bf32-f11939eade24" />
