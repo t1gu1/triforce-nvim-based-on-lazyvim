@@ -67,11 +67,10 @@ return {
         "fixjson",
         "prettierd",
         "luacheck",
-        "stylua",
         "markdownlint",
         "tailwindcss-language-server",
-        "gopls",
         "vtsls",
+        -- "gopls", -- GoLang
       },
     },
   },
