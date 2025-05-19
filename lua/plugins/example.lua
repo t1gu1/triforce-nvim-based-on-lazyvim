@@ -29,6 +29,7 @@ return {
       }
     end,
   },
+
   {
     "nvim-treesitter/nvim-treesitter",
     opts = {
@@ -66,7 +67,7 @@ return {
         "fixjson",
         "prettierd",
         "luacheck",
-        "markdownlint",
+        "markdownlint-cli2",
         "tailwindcss-language-server",
         "vtsls",
         -- "gopls", -- GoLang
