@@ -2,6 +2,34 @@
 
 local map = vim.keymap.set
 
+-- Explorer
+function ExplorerToggle()
+  Snacks.explorer.open({
+    path = LazyVim.root(),
+    auto_close = true,
+    layout = {
+      preset = "ivy",
+      preview = true,
+      layout = { position = "right", width = 120 },
+    },
+  })
+end
+
+map("n", "<leader>e", function()
+  ExplorerToggle()
+end, { desc = "Explorer - Reveal activve file" })
+
+map("n", "<leader>E", function()
+  ExplorerToggle()
+  local timer = vim.loop.new_timer()
+  local start_up_func = function()
+    vim.api.nvim_feedkeys("Z", "m", false)
+  end
+  if timer ~= nil then
+    timer:start(10, 0, vim.schedule_wrap(start_up_func))
+  end
+end, { desc = "Explorer - Reveal activve file" })
+
 -- Code
 map({ "n", "v" }, "<leader>/", "<cmd>normal gcc<cr>", { desc = "Toggle Comments" })
 map({ "i", "x", "n", "s" }, "<C-s>", "<cmd>w<cr><esc>", { desc = "Save File" })
