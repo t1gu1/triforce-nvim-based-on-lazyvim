@@ -10,7 +10,7 @@ Refer to the [documentation](https://lazyvim.github.io/installation) to get star
 
 I simply try to keep a lot of the default LazyVim configuration, but I added some plugins and changed some keymaps to make it a bit more intuitive and faster with some extras for web development.
 
-- Requires Mason, LSP, and Treesitter plugins to develop in web technologies (JS, TS, TSX, JSX, etc.)
+- Add the requires Mason, LSP, and Treesitter plugins to develop in web technologies (JS, TS, TSX, JSX, etc.)
 - Improved terminal management:
   - Press `2<c-/>` to toggle terminal 2, then `<c-/>` to toggle it again.
 - Simplified lualine:
@@ -35,6 +35,6 @@ I simply try to keep a lot of the default LazyVim configuration, but I added som
 - Additional keymaps to move up and down a line
 - Removed markdown `MD013` rule that limits README lines to 80 characters
 
-### Another image
+## Preview
 
 <img width="1725" alt="image" src="https://github.com/user-attachments/assets/ff2717a7-fa87-4aba-b482-8ff5e7c30efd" />
