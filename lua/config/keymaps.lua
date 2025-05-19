@@ -1,4 +1,4 @@
--- Default keymaps that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/keymaps.lua
+-- Default keymaps that are always set: https://github.com/LazyVim/LazyVim/blob/main/ ua/lazyvim/config/keymaps.lua
 
 local map = vim.keymap.set
 
