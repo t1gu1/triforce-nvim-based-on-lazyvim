@@ -2,7 +2,7 @@
 
 A nice config based on [LazyVim](https://github.com/LazyVim/LazyVim).
 
-First, refer to the [documentation](https://lazyvim.github.io/installation) to get started and get info of what i don't custimized!
+First, refer to the [documentation](https://lazyvim.github.io/installation) to get started and get info of what i don't customized!
 
 Then clone it: `git clone https://github.com/t1gu1/lazyvim-config ~/.config/nvim`
 
@@ -29,7 +29,7 @@ I simply try to keep a lot of the default LazyVim configuration, but I added som
   - Explorer auto-closes when unfocused or a file is selected
   - I always put it to the **right** because it doesn't move/push the code when it open the view
 - Classic `<leader>ff` and `<leader>fw` to **search for files and words** in the project
-  - Add `<leader>ft` in that logic to **find TODO**
+  - Add `<leader>ft` in that logic to **find TODO(s)**
 - Easier tab/buffer management with `<tab>` keymaps:
   - `<tab>`: Next buffer
   - `<S-tab>`: Previous buffer
