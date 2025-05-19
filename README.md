@@ -37,6 +37,7 @@ I simply try to keep a lot of the default LazyVim configuration, but I added som
 - Additional keymaps to **move up and down a line(s)**
 - Add **Markdown general rules** inside nvim config itself
   - Removed some **Markdown Rules**
+    - `MD033` rule that doesn't allow HTML
     - `MD013` rule that limits README lines to 80 characters
     - `MD043` rule that don't accept emoji in heading title...
 
