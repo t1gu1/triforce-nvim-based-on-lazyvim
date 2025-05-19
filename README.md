@@ -1,8 +1,10 @@
 # 💤 LazyVim
 
-A starter template for [LazyVim](https://github.com/LazyVim/LazyVim).
+A nice config based on [LazyVim](https://github.com/LazyVim/LazyVim).
 
-Refer to the [documentation](https://lazyvim.github.io/installation) to get started.
+First, refer to the [documentation](https://lazyvim.github.io/installation) to get started and get info of what i don't custimized!
+
+Then clone it: `git clone https://github.com/t1gu1/lazyvim-config ~/.config/nvim`
 
 <img width="1725" alt="Dashboard" src="https://github.com/user-attachments/assets/66091d13-0c43-4303-8bf2-f9546bed6100" />
 
