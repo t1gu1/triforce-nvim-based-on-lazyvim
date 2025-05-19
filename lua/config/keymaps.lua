@@ -33,6 +33,10 @@ end, { desc = "Explorer - Reveal activve file" })
 -- Code
 map({ "n", "v" }, "<leader>/", "<cmd>normal gcc<cr>", { desc = "Toggle Comments" })
 map({ "i", "x", "n", "s" }, "<C-s>", "<cmd>w<cr><esc>", { desc = "Save File" })
+map({ "n", "v" }, "<c-f>", function()
+  vim.api.nvim_feedkeys(" cu", "m", false)
+  vim.api.nvim_feedkeys(" cM", "m", false)
+end, { desc = "Remove unused import and add missing imports" })
 
 -- Move Lines
 map("n", "<c-j>", "<cmd>execute 'move .+' . v:count1<cr>==", { desc = "Move Down" })

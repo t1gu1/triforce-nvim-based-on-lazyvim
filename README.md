@@ -17,6 +17,7 @@ I simply try to keep a lot of the default LazyVim configuration, but I added som
 - Streamlined dashboard:
   - Simpler layout, faster project access
   - Cute cat ASCII art
+- Add missing imports and remove unused ones with `<c-f>`
 - Enhanced explorer keymaps and fullscreen preview:
   - `<leader>e`: Open explorer on buffer file
   - `<leader>E`: Open explorer at project root with all folders closed
