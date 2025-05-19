@@ -10,6 +10,9 @@ I simply try to keep a lot of the default LazyVim configuration, but I added som
 
 - Required Mason LSP and Treesitter plugin to devellop in web technologies (js, ts, tsx, jsx, etc)
 - Better terminal management! (If you press `2<c-/>`, it will always toggle the number `2` terminal with a simple `<c-/>` after)
+- Better and simpler lualine
+  - Add project name as the first element (projectName / gitranch / file)
+  - I remove some useless elements
 - Better dashboard that's more simple and can open project more quickly
   - Cute cat as dashboard ASCII image
 - Better Explorer keymaps, fullscreen with preview
