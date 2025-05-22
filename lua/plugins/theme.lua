@@ -10,9 +10,7 @@ return {
       opts.on_highlights = function(hl, c)
         hl["SnacksDashboardHeader"] = {
           fg = choose({
-            c.cyan,
             c.green,
-            c.green2,
             c.magenta,
             c.orange,
             c.purple,
