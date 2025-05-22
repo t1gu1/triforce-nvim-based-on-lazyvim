@@ -16,6 +16,7 @@ return {
               function(self)
                 vim.cmd("stopinsert")
 
+                ---@diagnostic disable-next-line: undefined-field
                 local timer = vim.loop.new_timer()
                 local start_up_func = function()
                   vim.api.nvim_feedkeys("/", "n", true)
