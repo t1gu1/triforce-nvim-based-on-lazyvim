@@ -14,14 +14,19 @@ I simply try to keep a lot of the default LazyVim configuration, but I added som
 
 - Add the requires Mason, LSP, and Treesitter plugins **to develop in web technologies** (JS, TS, TSX, JSX, etc.)
 - Improved **terminal** management:
-  - Press `2<c-/>` to toggle terminal 2, then `<c-/>` to toggle it again.
+  - Press `<leader>t` to toggle the last active terminal.
+  - When terminal is open, simply press `<ESC>` to "close" the terminal window
+  - Press `2<leader>t` to toggle terminal 2, then `<leader>t` will toggle that same terminal.
+    - Just an example of how open different terminals `1<leader>t`, `2<leader>t`, `3<leader>t`, etc
+  - When terminal is open, press `<c-/>` to search a words in the terminal
+    - When terminal is open and you see search hilight, press `<c-.>` to stop the highlight
 - Simplified **Lualine**:
   - Project name as the first element (projectName / gitranch)
   - Removed unnecessary elements like the file name since it is already show as the buffer
 - Streamlined **Dashboard**:
-  - Faster project access
+  - Faster project access and ordered by last "time project was open"
   - Simpler layout with only the necessary options
-  - Cute cat ASCII art
+  - Cute cat ASCII art with randomised color on each opening
 - **Add missing imports** and **Remove unused ones** with `<c-f>`
 - **Enhanced explorer** keymaps:
   - `<leader>e`: Open explorer on **buffer file location**
@@ -29,14 +34,22 @@ I simply try to keep a lot of the default LazyVim configuration, but I added som
   - Explorer auto-closes when unfocused or a file is selected
   - I always put it to the **right** because it doesn't move/push the code when it open the view
 - Classic `<leader>ff` and `<leader>fw` to **search for files and words** in the project
+- Add `<leader>f<leader>` to resume a previous search
   - Add `<leader>ft` in that logic to **find TODO(s)**
+  - Add `<leader>fr` in that logic to search and replace
+    -Add `<leader>ft` in that logic to \*\*find TODO(s)
 - Easier tab/buffer management with `<tab>` keymaps:
   - `<tab>`: Next buffer
   - `<S-tab>`: Previous buffer
-  - `<leader><tab><tab>`: Remove other buffers
-  - `<leader><tab>c`: Close right buffers
-  - `<leader><S-tab>c`: Close left buffers
+  - `<leader><tab><tab>`: Close other buffers
+  - `<leader><S-tab><S-tab>`: Close active buffer
+  - `<leader>d<tab>`: Close right buffers
+  - `<leader>d<S-tab>`: Close left buffers
+  - `<leader><tab>`: Move the active buffer to the right
+  - `<leader><S-tab>`: Move the active buffer to the left
 - Additional keymaps to **move up and down a line(s)**
+  - `<c-j>`, `<c-k>`, `<c-up>`, `<c-down>`, can move lines
+  - I kept the default ones unsing the **Options** button
 - Add **Markdown general rules** inside nvim config itself
   - Removed some **Markdown Rules**
     - `MD033` rule that doesn't allow HTML
