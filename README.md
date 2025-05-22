@@ -27,6 +27,11 @@ I simply try to keep a lot of the default LazyVim configuration, but I added som
   - Faster project access and ordered by last "time project was open"
   - Simpler layout with only the necessary options
   - Cute cat ASCII art with randomised color on each opening
+    - ![image](https://github.com/user-attachments/assets/4f088602-2ea4-4238-8aee-fa2f0e2e1d63)
+    - ![image](https://github.com/user-attachments/assets/c1a20941-cfbd-475d-b1e3-abb464d0b7fc)
+    - ![image](https://github.com/user-attachments/assets/e05d0dd8-305a-48e3-bc18-b14555521415)
+    - ![image](https://github.com/user-attachments/assets/0919ab4c-e8ee-4c15-90be-002ae7cead7a)
+    - ![image](https://github.com/user-attachments/assets/6116ad24-6149-4059-9bac-577282d3b96c)
 - **Add missing imports** and **Remove unused ones** with `<c-f>`
 - **Enhanced explorer** keymaps:
   - `<leader>e`: Open explorer on **buffer file location**
