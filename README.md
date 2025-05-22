@@ -21,7 +21,7 @@ I simply try to keep a lot of the default LazyVim configuration, but I added som
   - When terminal is open, press `<c-/>` to search a words in the terminal
     - When terminal is open and you see search hilight, press `<c-.>` to stop the highlight
 - Simplified **Lualine**:
-  - Project name as the first element (projectName / gitranch)
+  - Project name as the first element (**ProjectName** / GitBranch / Diff)
   - Removed unnecessary elements like the file name since it is already show as the buffer
 - Streamlined **Dashboard**:
   - Faster project access and ordered by last "time project was open"
@@ -37,7 +37,6 @@ I simply try to keep a lot of the default LazyVim configuration, but I added som
 - Add `<leader>f<leader>` to resume a previous search
   - Add `<leader>ft` in that logic to **find TODO(s)**
   - Add `<leader>fr` in that logic to search and replace
-    -Add `<leader>ft` in that logic to \*\*find TODO(s)
 - Easier tab/buffer management with `<tab>` keymaps:
   - `<tab>`: Next buffer
   - `<S-tab>`: Previous buffer
@@ -55,6 +54,11 @@ I simply try to keep a lot of the default LazyVim configuration, but I added som
     - `MD033` rule that doesn't allow HTML
     - `MD013` rule that limits README lines to 80 characters
     - `MD043` rule that don't accept emoji in heading title...
+- Some other nice shorcuts
+  - `<leader>/` to comment/uncomment a line
+  - `<leader>d/` to stop the highlight of the last search
+  - `<c-a>` to do a select all (`ggvG`)
+  - `<C-=>` and `<C-->` to increase/decrease a number
 
 ## Preview
 
