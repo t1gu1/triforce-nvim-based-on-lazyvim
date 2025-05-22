@@ -51,14 +51,7 @@ map({ "n", "v" }, "<c-f>", function()
 end, { desc = "Remove unused import and add missing imports" })
 
 -- Increment and Decrement a number
-map({ "n", "v" }, "<C-=>", function()
-  print("increment")
-  vim.api.nvim_feedkeys(vim.api.nvim_replace_termcodes("<C-a>", true, false, true), "i", false)
-end, { desc = "Remove unused import and add missing imports" })
-map({ "n", "v" }, "<c-->", function()
-  print("decrement")
-  vim.api.nvim_feedkeys(vim.api.nvim_replace_termcodes("<C-x>", true, false, true), "i", false)
-end, { desc = "Remove unused import and add missing imports" })
+-- Go see in the `general.lua` file
 
 -- Move Lines
 map("n", "<c-j>", "<cmd>execute 'move .+' . v:count1<cr>==", { desc = "Move Down" })

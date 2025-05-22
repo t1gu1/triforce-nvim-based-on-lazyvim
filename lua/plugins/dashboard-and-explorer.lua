@@ -56,7 +56,6 @@ return {
 
       -- DASHBOARD
       dashboard = {
-
         preset = {
           header = [[
 
@@ -74,21 +73,11 @@ return {
           pick = nil,
           ---@type snacks.dashboard.Item[]
           keys = {
-            {
-              icon = " ",
-              key = "p",
-              desc = "Projects",
-              action = function()
-                Snacks.picker.projects({ sort = { fields = { "time:asc", "idx" } } })
-              end,
-            },
+            -- stylua: ignore
+            { icon = " ", key = "p", desc = "Projects", action = function() Snacks.picker.projects({ sort = { fields = { "time:asc", "idx" } } }) end, },
             { icon = " ", key = "s", desc = "Restore Session", section = "session" },
-            {
-              icon = " ",
-              key = "c",
-              desc = "Config",
-              action = ":lua Snacks.dashboard.pick('files', {cwd = vim.fn.stdpath('config')})",
-            },
+            -- stylua: ignore
+            { icon = " ", key = "c", desc = "Config", action = function () Snacks.dashboard.pick('files', {cwd = vim.fn.stdpath('config')}) end, },
             { icon = "󰒲 ", key = "L", desc = "Lazy", action = ":Lazy", enabled = package.loaded.lazy ~= nil },
             { icon = " ", key = "q", desc = "Quit", action = ":qa" },
           },
