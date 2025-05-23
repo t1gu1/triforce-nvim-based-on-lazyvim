@@ -81,4 +81,23 @@ return {
       package_info.get_status()
     end,
   },
+  {
+    "luckasRanarison/tailwind-tools.nvim",
+    event = "VeryLazy",
+    opts = {
+      document_color = {
+        enabled = true,
+        kind = "foreground",
+        inline_symbol = "󰝤 ",
+        debounce = 200,
+      },
+      conceal = {
+        enabled = false,
+        symbol = "󱏿",
+        highlight = {
+          fg = "#38BDF8",
+        },
+      },
+    },
+  },
 }
