@@ -4,7 +4,8 @@
 
 local map = vim.keymap.set
 
--- Visual mode
+map({ "n", "v" }, ";", "@q", { desc = "Trigger macro in register q" })
+
 map({ "n", "v" }, "d", '"_d', { desc = "Delete without remove yank" })
 map({ "n", "v" }, "D", '"_D', { desc = "Delete without remove yank" })
 map({ "n", "v" }, "c", '"_c', { desc = "Replace without remove yank" })
