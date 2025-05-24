@@ -80,23 +80,26 @@ map("n", "<leader><tab>", "<cmd>BufferLineMoveNext<cr>", { desc = "Move buffers 
 map("n", "<leader><S-tab>", "<cmd>BufferLineMovePrev<cr>", { desc = "Move buffers to the left" })
 
 -- Terminal
-map("t", "<ESC>", "<cmd>q<cr>", { desc = "Close terminal" })
-
 local lastTerminalNumberOpened = 1
+
+function OpenTerminal()
+  print("Open terminal #" .. lastTerminalNumberOpened)
+  Snacks.terminal.toggle(nil, {
+    cwd = LazyVim.root(),
+    win = { position = "float", border = "rounded" },
+    env = { id = "term" .. lastTerminalNumberOpened },
+  })
+end
+
+map("t", "<ESC>", "<cmd>q<cr>", { desc = "Close terminal" })
 
 for id = 1, 9 do
   map("n", id .. "<leader>t", function()
-    print("Open terminal #" .. id)
     lastTerminalNumberOpened = id
-    Snacks.terminal
-      .toggle(nil, { cwd = LazyVim.root(), win = { position = "float" }, env = { id = "term" .. lastTerminalNumberOpened } })
-      :add_padding()
+    OpenTerminal()
   end, { desc = "Terminal float opening base on the number #" .. lastTerminalNumberOpened })
 end
 
 map("n", "<leader>t", function()
-  print("Open terminal #" .. lastTerminalNumberOpened)
-  Snacks.terminal
-    .toggle(nil, { cwd = LazyVim.root(), win = { position = "float" }, env = { id = "term" .. lastTerminalNumberOpened } })
-    :add_padding()
+  OpenTerminal()
 end, { desc = "Terminal float toggle base on the last terminal number opened" })
