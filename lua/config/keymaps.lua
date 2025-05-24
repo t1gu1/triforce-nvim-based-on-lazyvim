@@ -5,10 +5,12 @@
 local map = vim.keymap.set
 
 -- Visual mode
-map("v", "d", '"_d', { desc = "Delete without remove yank" })
-map("v", "D", '"_D', { desc = "Delete without remove yank" })
-map("v", "p", '"_dP', { desc = "Paste without remove yank" })
-map("v", "P", '"_dP', { desc = "Paste without remove yank" })
+map({ "n", "v" }, "d", '"_d', { desc = "Delete without remove yank" })
+map({ "n", "v" }, "D", '"_D', { desc = "Delete without remove yank" })
+map({ "n", "v" }, "c", '"_c', { desc = "Replace without remove yank" })
+map({ "n", "v" }, "C", '"_C', { desc = "Replace without remove yank" })
+map("n", "x", '"_x', { desc = "Remove without remove yank" })
+map("n", "X", '"_X', { desc = "Remove without remove yank" })
 
 -- Search
 map("n", "<leader>d/", "<cmd>noh<cr>", { desc = "Turn off highlighting until the next search" })
