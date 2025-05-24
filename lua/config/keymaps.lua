@@ -82,6 +82,7 @@ map("n", "<leader><tab>", "<cmd>BufferLineMoveNext<cr>", { desc = "Move buffers 
 map("n", "<leader><S-tab>", "<cmd>BufferLineMovePrev<cr>", { desc = "Move buffers to the left" })
 
 -- Terminal
+-- There is other keymaps for terminal in dashboard-and-explorer.lua
 local lastTerminalNumberOpened = 1
 
 function OpenTerminal()
@@ -92,8 +93,6 @@ function OpenTerminal()
     env = { id = "term" .. lastTerminalNumberOpened },
   })
 end
-
-map("t", "<ESC>", "<cmd>q<cr>", { desc = "Close terminal" })
 
 for id = 1, 9 do
   map("n", id .. "<leader>t", function()
