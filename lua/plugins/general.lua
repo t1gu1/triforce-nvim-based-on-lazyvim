@@ -10,6 +10,28 @@ function Dial(increment, g)
 end
 
 return {
+  {
+    "CopilotC-Nvim/CopilotChat.nvim",
+    opts = {
+      mappings = {
+        submit_prompt = {
+          normal = "<C-s>",
+          insert = "<C-s>",
+        },
+        accept_diff = {
+          normal = "<C-cr>",
+          insert = "<C-cr>",
+        },
+      },
+      prompts = {
+        Complete = {
+          prompt = "Try to compplete the code for the selected code.",
+          system_prompt = "You are very good at explaining programming code and keepping the code easy to understand.",
+          mapping = "<leader>ac",
+        },
+      },
+    },
+  },
   { import = "lazyvim.plugins.extras.lang.typescript" },
   {
     "folke/trouble.nvim",
