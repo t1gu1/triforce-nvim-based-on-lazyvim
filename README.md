@@ -106,7 +106,7 @@ Adjusted to use shadow text with full Copilot suggestion available (previously l
 - Custom rules in config:
   - Disabled: `MD033` (HTML allowed), `MD013` (line length), `MD043` (emoji in headings).
 
-### Shortcuts
+### Other Shortcuts
 
 - `<leader>/`: Comment/uncomment line.
 - `<leader>d/`: Clear last search highlight.
