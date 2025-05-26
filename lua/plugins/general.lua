@@ -105,6 +105,8 @@ return {
         sections = {
           lualine_a = {
             function()
+              -- vim.api.nvim_get_hl_id_by_name("white")
+              -- vim.api.nvim_get_hl(1516)
               local projectName = vim.fn.getcwd():match("([^/]+)$")
               local firstLetter = projectName:sub(1, 1)
               local restOfString = projectName:sub(2)
@@ -112,7 +114,10 @@ return {
               return capitalizedProjectName
             end,
           },
-          lualine_b = { "branch", "diff" },
+          lualine_b = {
+            "branch",
+            "diff",
+          },
           lualine_c = { "diagnostics" },
           lualine_x = { "encoding", "fileformat" },
           lualine_y = { "filetype" },
