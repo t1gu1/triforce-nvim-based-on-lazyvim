@@ -235,7 +235,7 @@ config:
     style: "consistent"
 
   # MD051/link-fragments : Link fragments should be valid : https://github.com/DavidAnson/markdownlint/blob/v0.32.1/doc/md051.md
-  MD051: true
+  MD051: false
 
   # MD052/reference-links-images : Reference links and images should use a label that is defined : https://github.com/DavidAnson/markdownlint/blob/v0.32.1/doc/md052.md
   MD052:

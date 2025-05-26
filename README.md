@@ -2,11 +2,12 @@
 
 <!--toc:start-->
 
-- [What I customized](#what-i-customized)
-- [Preview](#preview)
-<!--toc:end-->
+- [꧁ ༺ Triforce Nvim ༻ ꧂](#triforce-nvim)
+  - [What I customized](#what-i-customized)
+  - [Preview](#preview)
+  <!--toc:end-->
 
-A nice config based on 💤[LazyVim](https://github.com/LazyVim/LazyVim).
+A nice configuration based on 💤[LazyVim](https://github.com/LazyVim/LazyVim).
 
 First, refer to the [documentation](https://lazyvim.github.io/installation) to get started and get info of what i don't customized!
 
@@ -16,68 +17,101 @@ Then clone it: `git clone https://github.com/t1gu1/lazyvim-config ~/.config/nvim
 
 ## What I customized
 
-I simply try to keep a lot of the default LazyVim configuration, but I added some plugins and changed some keymaps to make it a bit more intuitive and faster with some extras for web development.
+## Customizations Overview
 
-- Nice and clean with custom tokyo theme adjustments overall (Yellow soft tint to fit with the ASCII dashboard image)
-- Add the requires Mason, LSP, and Treesitter plugins **to develop in web technologies** (JS, TS, TSX, JSX, etc.)
-- Improved **terminal** management:
-  - Press `<leader>t` to toggle the last active terminal.
-  - When terminal is open, simply press `<ESC>` to "close" the terminal window
-  - Press `2<leader>t` to toggle terminal 2, then `<leader>t` will toggle that same terminal.
-    - Just an example of how open different terminals `1<leader>t`, `2<leader>t`, `3<leader>t`, etc
-  - When terminal is open, press `<c-/>` to search a words in the terminal
-    - When terminal is open and you see search hilight, press `<c-.>` to stop the highlight
-- **Copilot suggestion** keymaps and behavior ajustments:
-  - `<C-cr>` to accept the Copilot suggestion
-  - `<C-w>` to accept a **word** from the Copilot suggestion
-  - `<C-l>` or `<C-right>` to accept the Copilot suggestion and move to the next line
-  - `<C-h>` or `<C-left>` to cancel the Copilot suggestion
-  - `<C-]>` or `<C-[>` to ask Copilot to generate a new suggestion
-- **Copilot Chat** keymaps
-  - `<leader>aa` to open Copilot Chat
-  - When you are in a Copilot Chat buffer:
-    - `<C-s>` to send what you wrote in to Copilot Chat
-    - `<C-cr>` to accept the Copilot suggestion
-- Simplified **Lualine**:
-  - Project name as the first element (**ProjectName** / GitBranch / Diff)
-  - Removed unnecessary elements like the file name since it is already show as the buffer
-- Streamlined **Dashboard**:
-  - Faster project access and ordered by last "time project was open"
-  - Simpler layout with only the necessary options
-- **Add missing imports** and **Remove unused ones** with `<c-f>`
-- **Enhanced explorer** keymaps:
-  - `<leader>e`: Open explorer on **buffer file location**
-  - `<leader>E`: Open explorer at **project root** with **all folders closed**
-  - Explorer auto-closes when unfocused or a file is selected
-  - I always put it to the **right** because it doesn't move/push the code when it open the view
-- Classic `<leader>ff` and `<leader>fw` to **search for files and words** in the project
-- Add `<leader>f<leader>` to resume a previous search
-  - Add `<leader>ft` in that logic to **find TODO(s)**
-  - Add `<leader>fr` in that logic to search and replace
-- Easier tab/buffer management with `<tab>` keymaps:
-  - `<tab>`: Next buffer
-  - `<S-tab>`: Previous buffer
-  - `<leader><tab><tab>`: Close other buffers
-  - `<leader><S-tab><S-tab>`: Close active buffer
-  - `<leader>d<tab>`: Close right buffers
-  - `<leader>d<S-tab>`: Close left buffers
-  - `<leader><tab>`: Move the active buffer to the right
-  - `<leader><S-tab>`: Move the active buffer to the left
-- Additional keymaps to **move up and down a line(s)**
-  - `<S-j>`, `<S-k>`, `<S-up>`, `<S-down>`, can move lines
-  - I kept the default ones unsing the **Options** button
-- Add keymaps to manipulation the **indentation** in `Insert` and `Visual` mode:
-  - `<Tab>` and `<S-Tab>` to indent/unindent
-- Add **Markdown general rules** inside nvim config itself
-  - Removed some **Markdown Rules**
-    - `MD033` rule that doesn't allow HTML
-    - `MD013` rule that limits README lines to 80 characters
-    - `MD043` rule that don't accept emoji in heading title...
-- Some other nice shortcuts
-  - `<leader>/` to comment/uncomment a line
-  - `<leader>d/` to stop the highlight of the last search
-  - `<c-a>` to do a select all (`ggvG`)
-  - `<C-=>` and `<C-->` to increase/decrease a number
+This configuration keeps most of the default LazyVim setup, with added plugins and keymaps for a faster, more intuitive experience—especially for web development.
+
+### Appearance
+
+- Clean look with custom Tokyo theme (soft yellow tint to match ASCII dashboard).
+
+### Web Development Support
+
+- Mason, LSP, and Treesitter plugins for JS, TS, TSX, JSX, etc.
+
+### Terminal Management
+
+- `<leader>t`: Toggle last active terminal.
+- `2<leader>t`: Toggle terminal 2 (or `1<leader>t`, `3<leader>t`, etc.).
+- `<ESC>`: Close terminal window.
+- `<c-/>`: Search in terminal.
+- `<c-.>`: Clear terminal search highlight.
+
+### Copilot
+
+Adjusted to use shadow text with full Copilot suggestion available (previously limited by Blink).
+
+#### Copilot Suggestions
+
+- `<C-cr>`: Accept suggestion.
+- `<C-w>`: Accept word from suggestion.
+- `<C-l>` / `<C-right>`: Accept and move to next line.
+- `<C-h>` / `<C-left>`: Cancel suggestion.
+- `<C-]>` / `<C-[>`: Request new suggestion.
+
+#### Copilot Chat
+
+- `<leader>aa`: Open Copilot Chat.
+- In Copilot Chat buffer:
+  - `<C-s>`: Send message.
+  - `<C-cr>`: Accept suggestion.
+
+### Statusline (Lualine)
+
+- Shows project name, Git branch, and diff.
+- File name removed (already shown in buffer).
+
+### Dashboard
+
+- Fast project access, ordered by last opened.
+- Simple layout with essential options.
+
+### Code Actions
+
+- `<c-f>`: Add missing imports / remove unused ones.
+
+### Explorer
+
+- `<leader>e`: Open at buffer file location.
+- `<leader>E`: Open at project root (all folders closed).
+- Auto-closes when unfocused or file selected.
+- Always on the right (doesn't shift code).
+
+### Search
+
+- `<leader>ff`: Find files.
+- `<leader>fw`: Find words.
+- `<leader>f<leader>`: Resume previous search.
+- `<leader>ft`: Find TODOs.
+- `<leader>fr`: Search and replace.
+
+### Buffer/Tab Management
+
+- `<tab>`: Next buffer.
+- `<S-tab>`: Previous buffer.
+- `<leader><tab><tab>`: Close other buffers.
+- `<leader><S-tab><S-tab>`: Close active buffer.
+- `<leader>d<tab>`: Close buffers to the right.
+- `<leader>d<S-tab>`: Close buffers to the left.
+- `<leader><tab>`: Move active buffer right.
+- `<leader><S-tab>`: Move active buffer left.
+
+### Line and Indent Movement
+
+- `<S-j>`, `<S-k>`, `<S-up>`, `<S-down>`: Move lines.
+- `<Tab>`, `<S-Tab>`: Indent/unindent in Insert/Visual mode.
+
+### Markdown Rules
+
+- Custom rules in config:
+  - Disabled: `MD033` (HTML allowed), `MD013` (line length), `MD043` (emoji in headings).
+
+### Shortcuts
+
+- `<leader>/`: Comment/uncomment line.
+- `<leader>d/`: Clear last search highlight.
+- `<c-a>`: Select all (`ggvG`).
+- `<C-=>`, `<C-->`: Increase/decrease number.
 
 ## Preview
 
