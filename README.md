@@ -67,6 +67,8 @@ I simply try to keep a lot of the default LazyVim configuration, but I added som
 - Additional keymaps to **move up and down a line(s)**
   - `<S-j>`, `<S-k>`, `<S-up>`, `<S-down>`, can move lines
   - I kept the default ones unsing the **Options** button
+- Add keymaps to manipulation the **indentation** in `Insert` and `Visual` mode:
+  - `<Tab>` and `<S-Tab>` to indent/unindent
 - Add **Markdown general rules** inside nvim config itself
   - Removed some **Markdown Rules**
     - `MD033` rule that doesn't allow HTML
