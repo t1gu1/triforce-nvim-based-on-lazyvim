@@ -42,10 +42,9 @@ return {
           accept = "<c-cr>", -- Primary key to accept ghost text
           next = "<c-[>", -- Cycle to the next ghost text suggestion (e.g., Alt + ])
           prev = "<c-]>", -- Cycle to the previous ghost text suggestion (e.g., Alt + [)
-          -- You can also add:
           accept_word = "<c-w>", -- Accept the next word of the suggestion
           accept_line = "<c-l>", -- Accept the entire line of the suggestion
-          -- dismiss = "<C-]>",    -- Dismiss the current ghost text suggestion
+          dismiss = "<c-h>", -- Dismiss the current ghost text suggestion
         },
       },
       panel = {
@@ -56,6 +55,7 @@ return {
   -- Remove copilot from the sources in blick (I prefer the ghost text)
   {
     "saghen/blink.cmp",
+
     opts = function(_, opts)
       -- Create a new sources table, excluding 'copilot'
       local new_default_sources = {}
@@ -71,6 +71,8 @@ return {
       if opts.sources.providers and opts.sources.providers.copilot then
         opts.sources.providers.copilot = nil
       end
+
+      opts.keymap["<Tab>"] = {} -- Disable the default <Tab> keymap to avoid conflicts
 
       return opts
     end,

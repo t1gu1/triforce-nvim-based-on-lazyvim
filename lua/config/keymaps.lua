@@ -3,6 +3,9 @@
 -- Default keymaps that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/keymaps.lua
 
 local map = vim.keymap.set
+local unmap = vim.keymap.del
+
+unmap("n", "<c-/>") -- Unmap old way to toggle terminal
 
 map({ "n", "v" }, ";", "@q", { desc = "Trigger macro in register q" })
 
@@ -50,6 +53,11 @@ map("n", "<leader>E", function()
   })
 end, { desc = "Explorer - Reveal root project" })
 
+-- Copilot
+-- Other keymaps for Copilot are in general under the plugin "zbirenbaum/copilot.lua"
+map({ "i" }, "<c-right>", "<cmd>Copilot suggestion accept_line<cr>", { desc = "Select all" })
+map({ "i" }, "<c-left>", "<cmd>Copilot suggestion dismiss<cr>", { desc = "Select all" })
+
 -- Code
 map({ "n", "v" }, "<c-a>", "ggvG", { desc = "Select all" })
 map({ "n", "v" }, "<leader>/", "<cmd>normal gcc<cr>", { desc = "Toggle Comments" })
@@ -63,14 +71,26 @@ end, { desc = "Remove unused import and add missing imports" })
 -- Go see in the `general.lua` file
 
 -- Move Lines
-map("n", "<c-j>", "<cmd>execute 'move .+' . v:count1<cr>==", { desc = "Move Down" })
-map("n", "<c-k>", "<cmd>execute 'move .-' . (v:count1 + 1)<cr>==", { desc = "Move Up" })
-map("n", "<c-DOWN>", "<cmd>execute 'move .+' . v:count1<cr>==", { desc = "Move Down" })
-map("n", "<c-UP>", "<cmd>execute 'move .-' . (v:count1 + 1)<cr>==", { desc = "Move Up" })
-map("v", "<c-j>", ":<C-u>execute \"'<,'>move '>+\" . v:count1<cr>gv=gv", { desc = "Move Down" })
-map("v", "<c-k>", ":<C-u>execute \"'<,'>move '<-\" . (v:count1 + 1)<cr>gv=gv", { desc = "Move Up" })
-map("v", "<c-DOWN>", ":<C-u>execute \"'<,'>move '>+\" . v:count1<cr>gv=gv", { desc = "Move Down" })
-map("v", "<c-UP>", ":<C-u>execute \"'<,'>move '<-\" . (v:count1 + 1)<cr>gv=gv", { desc = "Move Up" })
+map("n", "<S-j>", "<cmd>execute 'move .+' . v:count1<cr>==", { desc = "Move Down" })
+map("n", "<S-k>", "<cmd>execute 'move .-' . (v:count1 + 1)<cr>==", { desc = "Move Up" })
+map("n", "<S-DOWN>", "<cmd>execute 'move .+' . v:count1<cr>==", { desc = "Move Down" })
+map("n", "<S-UP>", "<cmd>execute 'move .-' . (v:count1 + 1)<cr>==", { desc = "Move Up" })
+map(
+  "i",
+  "<S-DOWN>",
+  "<cmd>stopinsert<cr><cmd>execute 'move .+' . v:count1<cr>==<cmd>lua vim.api.nvim_input('a')<cr>",
+  { desc = "Move Down" }
+)
+map(
+  "i",
+  "<S-UP>",
+  "<cmd>stopinsert<cr><cmd>execute 'move .-' . (v:count1 + 1)<cr>==<cmd>lua vim.api.nvim_input('a')<cr>",
+  { desc = "Move Up" }
+)
+map("v", "<S-j>", ":<C-u>execute \"'<,'>move '>+\" . v:count1<cr>gv=gv", { desc = "Move Down" })
+map("v", "<S-k>", ":<C-u>execute \"'<,'>move '<-\" . (v:count1 + 1)<cr>gv=gv", { desc = "Move Up" })
+map("v", "<S-DOWN>", ":<C-u>execute \"'<,'>move '>+\" . v:count1<cr>gv=gv", { desc = "Move Down" })
+map("v", "<S-UP>", ":<C-u>execute \"'<,'>move '<-\" . (v:count1 + 1)<cr>gv=gv", { desc = "Move Up" })
 
 -- Tabs
 map("n", "<tab>", "<cmd>bnext<cr>", { desc = "Next Tab" })
@@ -87,10 +107,9 @@ map("n", "<leader><S-tab>", "<cmd>BufferLineMovePrev<cr>", { desc = "Move buffer
 local lastTerminalNumberOpened = 1
 
 function OpenTerminal()
-  print("Open terminal #" .. lastTerminalNumberOpened)
   Snacks.terminal.toggle(nil, {
     cwd = LazyVim.root(),
-    win = { position = "float", border = "rounded" },
+    win = { position = "float", border = "rounded", title = "#" .. lastTerminalNumberOpened },
     env = { id = "term" .. lastTerminalNumberOpened },
   })
 end
