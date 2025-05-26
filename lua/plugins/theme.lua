@@ -51,7 +51,7 @@ return {
         -- Explorer icons color
         -- hl["MiniIconsPurple"] = { fg = c.blue, bold = true } -- Src folder
         hl["MiniIconsAzure"] = { fg = c.blue, bold = true }
-        hl["MiniIconsBlue"] = { fg = "#61DBFB", bold = true } -- React logo
+        hl["MiniIconsBlue"] = { fg = c.react, bold = true } -- React logo
 
         -- Picker (Search)
         hl["SnacksPickerListCursorLine"] = { bg = c.bg_highlight, bold = true }
@@ -72,12 +72,24 @@ return {
         hl["DiagnosticInfo"] = { fg = c.blue, bold = true }
         hl["NoiceCmdlineIconSearch"] = { fg = c.blue, bold = true }
         hl["NoiceCmdlinePopupBorderSearch"] = { fg = c.blue, bold = true }
+
+        -- Markdown
+        hl["@markup.heading.1.markdown"] = { fg = c.blue, bold = true }
+        hl["@markup.heading.2.markdown"] = { fg = c.blue1, bold = true }
+        hl["@markup.heading.3.markdown"] = { fg = c.blue2, bold = true }
+        hl["@markup.list.markdow"] = { fg = c.blue, bold = true }
+        hl["@punctuation.special.markdown"] = { fg = c.blue, bold = true }
+        hl["RenderMarkdownBullet"] = { fg = c.blue, bold = true }
+        hl["RenderMarkdownTableRow"] = { fg = c.blue, bold = true }
+        hl["RenderMarkdownTableHead"] = { fg = c.blue, bold = true }
+        hl["RenderMarkdownDash"] = { fg = c.blue, bold = true }
       end
 
       opts.on_colors = function(c)
         c.blue = "#FFFCEB"
         c.blue1 = "#fcdfb3"
         c.blue2 = "#FFF6C3"
+        c.react = "#61DBFB"
       end
       return opts
     end,
