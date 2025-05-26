@@ -6,7 +6,7 @@ First, refer to the [documentation](https://lazyvim.github.io/installation) to g
 
 Then clone it: `git clone https://github.com/t1gu1/lazyvim-config ~/.config/nvim`
 
-![image](https://github.com/user-attachments/assets/970f0187-8471-4e04-a345-0efaad9743e1)
+![image](https://github.com/user-attachments/assets/ad5dd980-edac-46ac-a77c-385ac4128d4f)
 
 ## What I customized
 
