@@ -57,6 +57,8 @@ return {
         hl["NoiceCmdlineIconCmdline"] = { fg = c.blue, bold = true }
         -- Noice (Search)
         hl["DiagnosticWarn"] = { fg = c.blue, bold = true }
+        hl["DiagnosticInfo"] = { fg = c.blue, bold = true }
+        hl["FloatTitle"] = { fg = c.blue, bold = true }
 
         -- hl["MiniIconsPurple"] = { fg = c.blue, bold = true }
         hl["MiniIconsAzure"] = { fg = c.blue, bold = true }
