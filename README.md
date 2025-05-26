@@ -6,7 +6,7 @@ First, refer to the [documentation](https://lazyvim.github.io/installation) to g
 
 Then clone it: `git clone https://github.com/t1gu1/lazyvim-config ~/.config/nvim`
 
-![image](https://github.com/user-attachments/assets/ad5dd980-edac-46ac-a77c-385ac4128d4f)
+![image](https://github.com/user-attachments/assets/7e0d4272-f623-47d3-8e36-441282080ae0)
 
 ## What I customized
 
@@ -62,9 +62,16 @@ I simply try to keep a lot of the default LazyVim configuration, but I added som
 
 ## Preview
 
-![image](https://github.com/user-attachments/assets/8d49f073-580a-4c4e-9e18-e0150bc688c6)
+![image](https://github.com/user-attachments/assets/8414cbb2-4f09-4486-908a-ec544209c5c3)
 
-![image](https://github.com/user-attachments/assets/f97c38bc-c33c-41f9-8168-764f06209eb0)
+![image](https://github.com/user-attachments/assets/63f81dc2-45ea-4669-a973-53b717e3dd74)
 
-![image](https://github.com/user-attachments/assets/101b42f0-f722-4a0c-a1a7-0d76caafdf9f)
+![image](https://github.com/user-attachments/assets/5d0d8d28-ac58-44fe-a7fb-6abe5103aa36)
+
+![image](https://github.com/user-attachments/assets/6cd7dfcc-d407-4621-b471-483927a9fa7c)
+
+![image](https://github.com/user-attachments/assets/9a32d1fb-dd03-4b45-a924-43cb2c0996d8)
+
+
+
 
