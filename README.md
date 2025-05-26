@@ -1,5 +1,12 @@
 # 💤 LazyVim
 
+<!--toc:start-->
+
+- [💤 LazyVim](#💤-lazyvim)
+  - [What I customized](#what-i-customized)
+  - [Preview](#preview)
+  <!--toc:end-->
+
 A nice config based on [LazyVim](https://github.com/LazyVim/LazyVim).
 
 First, refer to the [documentation](https://lazyvim.github.io/installation) to get started and get info of what i don't customized!
@@ -12,7 +19,7 @@ Then clone it: `git clone https://github.com/t1gu1/lazyvim-config ~/.config/nvim
 
 I simply try to keep a lot of the default LazyVim configuration, but I added some plugins and changed some keymaps to make it a bit more intuitive and faster with some extras for web development.
 
-- Nice and clean with custom tokyo theme ajustements (Yellow soft tint to fit with the ASCII dashboard image)
+- Nice and clean with custom tokyo theme adjustments overall (Yellow soft tint to fit with the ASCII dashboard image)
 - Add the requires Mason, LSP, and Treesitter plugins **to develop in web technologies** (JS, TS, TSX, JSX, etc.)
 - Improved **terminal** management:
   - Press `<leader>t` to toggle the last active terminal.
@@ -21,6 +28,17 @@ I simply try to keep a lot of the default LazyVim configuration, but I added som
     - Just an example of how open different terminals `1<leader>t`, `2<leader>t`, `3<leader>t`, etc
   - When terminal is open, press `<c-/>` to search a words in the terminal
     - When terminal is open and you see search hilight, press `<c-.>` to stop the highlight
+- **Copilot suggestion** keymaps and behavior ajustments:
+  - `<C-cr>` to accept the Copilot suggestion
+  - `<C-w>` to accept a **word** from the Copilot suggestion
+  - `<C-l>` or `<C-right>` to accept the Copilot suggestion and move to the next line
+  - `<C-h>` or `<C-left>` to cancel the Copilot suggestion
+  - `<C-]>` or `<C-[>` to ask Copilot to generate a new suggestion
+- **Copilot Chat** keymaps
+  - `<leader>aa` to open Copilot Chat
+  - When you are in a Copilot Chat buffer:
+    - `<C-s>` to send what you wrote in to Copilot Chat
+    - `<C-cr>` to accept the Copilot suggestion
 - Simplified **Lualine**:
   - Project name as the first element (**ProjectName** / GitBranch / Diff)
   - Removed unnecessary elements like the file name since it is already show as the buffer
@@ -47,14 +65,14 @@ I simply try to keep a lot of the default LazyVim configuration, but I added som
   - `<leader><tab>`: Move the active buffer to the right
   - `<leader><S-tab>`: Move the active buffer to the left
 - Additional keymaps to **move up and down a line(s)**
-  - `<c-j>`, `<c-k>`, `<c-up>`, `<c-down>`, can move lines
+  - `<S-j>`, `<S-k>`, `<S-up>`, `<S-down>`, can move lines
   - I kept the default ones unsing the **Options** button
 - Add **Markdown general rules** inside nvim config itself
   - Removed some **Markdown Rules**
     - `MD033` rule that doesn't allow HTML
     - `MD013` rule that limits README lines to 80 characters
     - `MD043` rule that don't accept emoji in heading title...
-- Some other nice shorcuts
+- Some other nice shortcuts
   - `<leader>/` to comment/uncomment a line
   - `<leader>d/` to stop the highlight of the last search
   - `<c-a>` to do a select all (`ggvG`)
@@ -71,7 +89,3 @@ I simply try to keep a lot of the default LazyVim configuration, but I added som
 ![image](https://github.com/user-attachments/assets/6cd7dfcc-d407-4621-b471-483927a9fa7c)
 
 ![image](https://github.com/user-attachments/assets/9a32d1fb-dd03-4b45-a924-43cb2c0996d8)
-
-
-
-
