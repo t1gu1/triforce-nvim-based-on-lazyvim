@@ -2,10 +2,9 @@
 
 <!--toc:start-->
 
-- [💤 LazyVim](#💤-lazyvim)
-  - [What I customized](#what-i-customized)
-  - [Preview](#preview)
-  <!--toc:end-->
+- [What I customized](#what-i-customized)
+- [Preview](#preview)
+<!--toc:end-->
 
 A nice config based on [LazyVim](https://github.com/LazyVim/LazyVim).
 
