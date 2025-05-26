@@ -9,12 +9,19 @@ unmap("n", "<c-/>") -- Unmap old way to toggle terminal
 
 map({ "n", "v" }, ";", "@q", { desc = "Trigger macro in register q" })
 
+-- Will not remove the yank when replacing or removing
 map({ "n", "v" }, "d", '"_d', { desc = "Delete without remove yank" })
 map({ "n", "v" }, "D", '"_D', { desc = "Delete without remove yank" })
 map({ "n", "v" }, "c", '"_c', { desc = "Replace without remove yank" })
 map({ "n", "v" }, "C", '"_C', { desc = "Replace without remove yank" })
 map("n", "x", '"_x', { desc = "Remove without remove yank" })
 map("n", "X", '"_X', { desc = "Remove without remove yank" })
+
+-- Indents
+map("i", "<Tab>", "<cmd>><cr>", { desc = "Indent" })
+map("i", "<S-Tab>", "<cmd><<cr>", { desc = "Remove indent" })
+map("v", "<Tab>", ">gv", { desc = "Indent a selection" })
+map("v", "<S-Tab>", "<gv", { desc = "Remove an indent to a selection" })
 
 -- Search
 map("n", "<leader>d/", "<cmd>noh<cr>", { desc = "Turn off highlighting until the next search" })
