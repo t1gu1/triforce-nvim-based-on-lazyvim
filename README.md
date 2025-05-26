@@ -1,14 +1,12 @@
 # ꧁ ༺ Triforce Nvim ༻ ꧂
 
-Based on 💤Lazyvim
-
 <!--toc:start-->
 
 - [What I customized](#what-i-customized)
 - [Preview](#preview)
 <!--toc:end-->
 
-A nice config based on [LazyVim](https://github.com/LazyVim/LazyVim).
+A nice config based on 💤[LazyVim](https://github.com/LazyVim/LazyVim).
 
 First, refer to the [documentation](https://lazyvim.github.io/installation) to get started and get info of what i don't customized!
 
