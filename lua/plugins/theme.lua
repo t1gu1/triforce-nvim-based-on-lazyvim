@@ -30,6 +30,13 @@ return {
         -- Use that following command to see the available highlights
         -- Snacks.picker.highlights({pattern = "hl_group:^SnacksDashboard"})
 
+        -- Generic highlights
+        hl["CursorLineNr"] = { fg = c.blue, bold = true }
+        hl["IncSearch"] = { fg = c.bg, bg = c.blue, bold = true }
+        hl["CurSearch"] = { fg = c.bg, bg = c.blue, bold = true }
+        hl["YankyYanked"] = { fg = c.bg, bg = c.blue, bold = true }
+        hl["Visual"] = { bg = c.bg_highlight, bold = true }
+
         -- Dashboard
         hl["SnacksDashboardTitle"] = { fg = c.fg, bold = true }
         hl["SnacksDashboardHeader"] = { fg = c.blue, bold = true }
@@ -40,6 +47,11 @@ return {
         -- Picker Explorer
         hl["SnacksPickerInputTitle"] = { fg = c.blue, bold = true }
         hl["SnacksPickerInputBorder"] = { fg = c.blue, bold = true }
+
+        -- Explorer icons color
+        -- hl["MiniIconsPurple"] = { fg = c.blue, bold = true } -- Src folder
+        hl["MiniIconsAzure"] = { fg = c.blue, bold = true }
+        hl["MiniIconsBlue"] = { fg = "#61DBFB", bold = true } -- React logo
 
         -- Picker (Search)
         hl["SnacksPickerListCursorLine"] = { bg = c.bg_highlight, bold = true }
@@ -56,13 +68,10 @@ return {
         hl["NoiceCmdlinePopupBorder"] = { fg = c.blue, bold = true }
         hl["NoiceCmdlineIconCmdline"] = { fg = c.blue, bold = true }
         -- Noice (Search)
-        hl["DiagnosticWarn"] = { fg = c.blue, bold = true }
-        hl["DiagnosticInfo"] = { fg = c.blue, bold = true }
         hl["FloatTitle"] = { fg = c.blue, bold = true }
-
-        -- hl["MiniIconsPurple"] = { fg = c.blue, bold = true }
-        hl["MiniIconsAzure"] = { fg = c.blue, bold = true }
-        hl["MiniIconsBlue"] = { fg = "#61DBFB", bold = true }
+        hl["DiagnosticInfo"] = { fg = c.blue, bold = true }
+        hl["NoiceCmdlineIconSearch"] = { fg = c.blue, bold = true }
+        hl["NoiceCmdlinePopupBorderSearch"] = { fg = c.blue, bold = true }
       end
 
       opts.on_colors = function(c)
