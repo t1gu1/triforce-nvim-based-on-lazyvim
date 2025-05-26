@@ -83,12 +83,14 @@ return {
         hl["RenderMarkdownTableRow"] = { fg = c.blue, bold = true }
         hl["RenderMarkdownTableHead"] = { fg = c.blue, bold = true }
         hl["RenderMarkdownDash"] = { fg = c.blue, bold = true }
+        hl["MatchParen"] = { fg = c.blue3, bold = true }
       end
 
       opts.on_colors = function(c)
         c.blue = "#FFFCEB"
         c.blue1 = "#fcdfb3"
         c.blue2 = "#FFF6C3"
+        c.blue3 = "#dcaf93"
         c.react = "#61DBFB"
       end
       return opts
