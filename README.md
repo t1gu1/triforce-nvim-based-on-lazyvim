@@ -1,4 +1,6 @@
-# ꧁ ༺ Triforce Nvim ༻ ꧂ based on 💤lazyvim
+# ꧁ ༺ Triforce Nvim ༻ ꧂
+
+Based on 💤Lazyvim
 
 <!--toc:start-->
 
