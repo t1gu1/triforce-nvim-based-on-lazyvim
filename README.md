@@ -13,7 +13,7 @@ First, refer to the [documentation](https://lazyvim.github.io/installation) to g
 
 Then clone it: `git clone https://github.com/t1gu1/lazyvim-config ~/.config/nvim`
 
-![image](https://github.com/user-attachments/assets/7e0d4272-f623-47d3-8e36-441282080ae0)
+![image](https://github.com/user-attachments/assets/18d33415-a01f-48f0-99e5-4bf0d960739f)
 
 ## What I customized
 
@@ -117,10 +117,8 @@ Adjusted to use shadow text with full Copilot suggestion available (previously l
 
 ![image](https://github.com/user-attachments/assets/8414cbb2-4f09-4486-908a-ec544209c5c3)
 
-![image](https://github.com/user-attachments/assets/63f81dc2-45ea-4669-a973-53b717e3dd74)
+![image](https://github.com/user-attachments/assets/dc0b323f-0b97-48fb-8f1c-49b3507b0999)
 
-![image](https://github.com/user-attachments/assets/5d0d8d28-ac58-44fe-a7fb-6abe5103aa36)
+![image](https://github.com/user-attachments/assets/e872dc54-7a37-49a7-82d0-fe6d97915c37)
 
-![image](https://github.com/user-attachments/assets/6cd7dfcc-d407-4621-b471-483927a9fa7c)
-
-![image](https://github.com/user-attachments/assets/9a32d1fb-dd03-4b45-a924-43cb2c0996d8)
+![image](https://github.com/user-attachments/assets/d00075f1-258e-4934-a12f-b46197af72d8)
