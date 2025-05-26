@@ -64,7 +64,7 @@ return {
       end
 
       opts.on_colors = function(c)
-        c.blue = "#f9f9f9"
+        c.blue = "#FFFCEB"
         c.blue1 = "#fcdfb3"
         c.blue2 = "#FFF6C3"
       end
