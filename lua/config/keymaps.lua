@@ -93,8 +93,8 @@ map("v", "<S-DOWN>", ":<C-u>execute \"'<,'>move '>+\" . v:count1<cr>gv=gv", { de
 map("v", "<S-UP>", ":<C-u>execute \"'<,'>move '<-\" . (v:count1 + 1)<cr>gv=gv", { desc = "Move Up" })
 
 -- Tabs
-map("n", "<tab>", "<cmd>bnext<cr>", { desc = "Next Tab" })
-map("n", "<S-tab>", "<cmd>bprevious<cr>", { desc = "Previous Tab" })
+map("n", "<tab>", "<cmd>BufferLineCycleNext<cr>", { desc = "Next Tab" })
+map("n", "<S-tab>", "<cmd>BufferLineCyclePrev<cr>", { desc = "Previous Tab" })
 map("n", "<leader><tab><tab>", "<cmd>BufferLineCloseOthers<cr>", { desc = "Close Other buffers" })
 map("n", "<leader><S-tab><S-tab>", "<cmd>bdelete<cr>", { desc = "Close active buffer" })
 map("n", "<leader>d<tab>", "<cmd>BufferLineCloseRight<cr>", { desc = "Close right buffers" })
