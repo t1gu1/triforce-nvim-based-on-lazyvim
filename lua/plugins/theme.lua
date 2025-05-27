@@ -123,4 +123,31 @@ return {
   },
   -- Disable since we use Tokyonight as a base
   { "catppuccin/nvim", enabled = false },
+  -- {
+  --   "catgoose/nvim-colorizer.lua",
+  --   event = "BufReadPre",
+  --   opts = { -- set to setup table
+  --   },
+  -- },
+  {
+    "brenoprata10/nvim-highlight-colors",
+    event = "BufReadPre",
+    opts = { -- set to setup table
+      -- render = "virtual",
+
+      ---Highlight tailwind colors, e.g. 'bg-blue-500'
+      enable_tailwind = true,
+
+      ---Set custom colors
+      ---Label must be properly escaped with '%' to adhere to `string.gmatch`
+      --- :help string.gmatch
+      -- TODO: Find a way to get the colors variable and parse it to create the custom_colors
+      custom_colors = {
+        { label = "bg%-accent", color = "#3D27C2FF" },
+        { label = "bg%-primary", color = "#FFFDF7FF" },
+        { label = "btn%-primary", color = "#FFCD1FFF" },
+        { label = "btn%-primary%-disabled", color = "#BBBAC1FF" },
+      },
+    },
+  },
 }
