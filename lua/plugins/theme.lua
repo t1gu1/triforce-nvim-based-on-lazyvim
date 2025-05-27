@@ -63,6 +63,12 @@ return {
 
         -- Terminal
         hl["FloatBorder"] = { fg = c.blue, bold = true }
+        -- LazyGit Active Box border and text
+        hl["MatchParen"] = { fg = c.blue3, bold = true }
+        hl["String"] = { fg = "#FFCDB2", bold = false }
+        hl["@property"] = { fg = "#B6FFEA", bold = true }
+        -- hl["@variable.member"] = { fg = "#FF0000", bold = true }
+        hl["SnacksIndent2"] = { fg = "#FF0000", bold = true }
 
         -- Noice (CMD with :)
         hl["NoiceCmdlinePopupBorder"] = { fg = c.blue, bold = true }
@@ -83,7 +89,6 @@ return {
         hl["RenderMarkdownTableRow"] = { fg = c.blue, bold = true }
         hl["RenderMarkdownTableHead"] = { fg = c.blue, bold = true }
         hl["RenderMarkdownDash"] = { fg = c.blue, bold = true }
-        hl["MatchParen"] = { fg = c.blue3, bold = true }
       end
 
       opts.on_colors = function(c)
@@ -91,7 +96,12 @@ return {
         c.blue1 = "#fcdfb3"
         c.blue2 = "#FFF6C3"
         c.blue3 = "#dcaf93"
+        c.blue5 = "#BEEBE9" -- Operators
         c.react = "#61DBFB"
+        c.orange = "#FFB38E"
+        c.red = "#FF9292"
+        -- c.red1 = "#ff0000"
+        c.purple = "#4FBDBA"
       end
       return opts
     end,
