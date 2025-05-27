@@ -121,4 +121,6 @@ return {
       return opts
     end,
   },
+  -- Disable since we use Tokyonight as a base
+  { "catppuccin/nvim", enabled = false },
 }
