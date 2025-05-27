@@ -115,11 +115,12 @@ Adjusted to use shadow text with full Copilot suggestion available (previously l
 
 ## Preview
 
-![image](https://github.com/user-attachments/assets/2e77e635-0a50-4988-9217-8946a9da3cf3)
+![image](https://github.com/user-attachments/assets/75c56e1c-f7ed-454c-9138-070c7aebe917)
 
-![image](https://github.com/user-attachments/assets/dc0b323f-0b97-48fb-8f1c-49b3507b0999)
+![image](https://github.com/user-attachments/assets/a052a426-c59b-4221-aadf-5ce226936ec2)
 
-![image](https://github.com/user-attachments/assets/e872dc54-7a37-49a7-82d0-fe6d97915c37)
+![image](https://github.com/user-attachments/assets/296b1cd2-b8f2-43e8-89dd-d5f2c1011ac9)
 
-![image](https://github.com/user-attachments/assets/2f02f457-928a-4326-8bf6-8ef3819a4299)
+![image](https://github.com/user-attachments/assets/75bf6e30-3e85-4bf1-a8bc-075051331419)
+
 
