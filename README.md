@@ -12,7 +12,7 @@ First, refer to the [documentation](https://lazyvim.github.io/installation) to g
 
 Then clone it: `git clone https://github.com/t1gu1/lazyvim-config ~/.config/nvim`
 
-![image](https://github.com/user-attachments/assets/18d33415-a01f-48f0-99e5-4bf0d960739f)
+![image](https://github.com/user-attachments/assets/d862341f-7b41-4326-95e7-1acf99206b6e)
 
 ## Pre-requise
 - Use one of those recommended terminal if you want to see **images**
