@@ -24,11 +24,11 @@ return {
         },
       },
       prompts = {
-        Complete = {
-          prompt = "Try to compplete the code for the selected code.",
-          system_prompt = "You are very good at explaining programming code and keepping the code easy to understand.",
-          mapping = "<leader>ac",
-        },
+        -- Complete = {
+        --   prompt = "Try to compplete the code for the selected code.",
+        --   system_prompt = "You are very good at explaining programming code and keepping the code easy to understand.",
+        --   mapping = "<leader>ac",
+        -- },
       },
     },
   },
