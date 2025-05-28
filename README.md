@@ -1,11 +1,10 @@
 # ꧁ ༺ Triforce Nvim ༻ ꧂
 
 <!--toc:start-->
-
 - [꧁ ༺ Triforce Nvim ༻ ꧂](#triforce-nvim)
   - [What I customized](#what-i-customized)
   - [Preview](#preview)
-  <!--toc:end-->
+<!--toc:end-->
 
 A nice configuration based on 💤[LazyVim](https://github.com/LazyVim/LazyVim).
 
@@ -14,6 +13,28 @@ First, refer to the [documentation](https://lazyvim.github.io/installation) to g
 Then clone it: `git clone https://github.com/t1gu1/lazyvim-config ~/.config/nvim`
 
 ![image](https://github.com/user-attachments/assets/18d33415-a01f-48f0-99e5-4bf0d960739f)
+
+## Pre-requise
+- Use one of those recommended terminal if you want to see **images**
+  - Ghostty
+  - Kitty
+  - WezTerm
+- Install these:
+  - `imagemagick` (To see more than only PNG)
+  - `git`
+  - `curl`
+  - `ripgrep`
+  - `fd-find` (Used by Snacks explorer / File manager)
+  - `luarocks`
+  - `fzf`
+  - `lazygit`
+    - On ubuntu: `curl -Lo lazygit.tar.gz "https://github.com/jesseduffield/lazygit/releases/download/v${LAZYGIT_VERSION}/lazygit_${LAZYGIT_VERSION}_Linux_x86_64.tar.gz"`
+- If on linux it is nice to install:
+  - `wl-clipboard` (For Wayland seemless copy/paste)
+  - On ubuntu, install `build-essential` (Will install the C compiler)
+- For javascript LSP
+  - Install NodeJS
+  - Run `npm install -g neovim`
 
 ## What I customized
 
