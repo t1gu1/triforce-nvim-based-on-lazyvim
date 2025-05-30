@@ -1,6 +1,67 @@
+local shouldPlayAnimation = true
+
+local asciiImg = [[
+  Oh yeah!!
+  Welcome to Snacks.nvim
+]]
+
+local function ascii(counting, callback)
+  if not shouldPlayAnimation then
+    return
+  end
+
+  asciiImg = [[
+  Oh yeah!!
+  Welcome to Snacks.nvim
+  Counting: {counting}
+  ]]
+
+  asciiImg = string.gsub(asciiImg, "{counting}", tostring(counting))
+
+  Snacks.dashboard.update()
+
+  print(counting)
+
+  if counting >= 5 then
+    callback(callback)
+  end
+  --   return [[
+  -- ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣴⡖ ⠀⢀⠀⠀⠀⠀ ⠀⠀⠀⠀⠀ ⠀
+  -- ⠀⠀⠀⠀⠀⠀⠀⠀⠈⢆⠀⠀⠀ ⣹⣷ ⣀⣴⠀⢀⣤⣶⡦⡀⠀⠀⠀⠀ ⠀
+  -- ⠢⣀⠀⠀⠀⠀⠀⢄⠀⠈⣆⣠⣼⣿⣿⣿⣿⣿⣿⣦⣼⣏⠀⠀⠀⠀⠀⠀  ⠀
+  -- ⠀⠈⠻⣶⣄⡀⠀⣨⣷⡿⠟⠋⠉⠉  ⠉⠉⠉⠛⠿⣿⣦⣀⠀⠀⠀⠀⠀ ⠀
+  -- ⠀⠀⠀⠀⠙⢿⣿⡿⠋⠀⠀⠀⠀ ⢠⡄⠀ ⠀⠀ ⠈⢿⣿⣏⢀⡀⠀⠀⠀⠀
+  -- ⠀⠀⠀⠀⠀⣼⡟⠀⠀⠀⠀⠀ ⣠⣿⣿⣆ ⠀⠀⠀⠀⠈⢿⣿⡁ ⣁⡀⠀⠀
+  -- ⠀⠀⠀⠒⢺⣿⠁⠀⠀⠀⠀ ⡰⠿⠿⠿⠿⢆⠀ ⠀⠀⠀⠸⣿⡿⠛⠉⠀⠀⠀
+  -- ⠀⠀⢀⢠⣾⣿⠀⠀⠀⠀ ⣴⣷⡀⠀⠀⢀⣾⣦⠀⠀ ⠀⠀⣿⣿⡦⠀⠀⠀⠀
+  -- ⠀⠀⠀⠀⣹⣿⠀⠀⠀ ⣼⣿⣿⣷⡀⢀⣾⣿⣿⣧  ⠀⢠⣿⡧⠤ ⠀⠀⠀
+  -- ⠀⠀⠀⠈⠛⢿⣆⠀ ⠈⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠁ ⠀⣼⡿⠀⠀⠀⠀⠀⠀
+  -- ⠀⠀⠀⠀⠀⠻⣿⣦⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀  ⠀⢀⣾⣿⣷⣄⠀⠀⠀⠀⠀
+  -- ⠀⠀⠀⠀⠀⠚⢻⣿⣿⣦⣄⡀⠀⠀⠀⠀  ⢀⣠⣶⣿⡋⠀⠈⠙⠻⣄⠀⠀
+  -- ⠀⠀⠀⠀⠀⠀⠀⢀⣿⠿⢿⣿⣿⣿⣶⣶⣿⡿⠻⣏⠀⠛⠄⠀⠀⠀⠀⠈⠃⠄
+  -- ⠀⠀⠀⠀⠀ ⡰⠛ ⠀⠸⠋⠻⣿⣁⠀⠁⠀⠀⠈⠀  ⠀⠀⠀⠀⠀⠀⠀⠀
+  -- ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡿⠉⠀⠀⠀⠀⠀⠀⠀⠀  ⠀⠀⠀⠀⠀⠀
+  --
+  -- ]]
+end
+
+local function theAnimation(callback)
+  require("snacks").animate(1, 5, function(value, ctx)
+    ascii(value, callback)
+  end, {
+    duration = 500,
+    fps = 60,
+  })
+end
+
 return {
   {
     "folke/snacks.nvim",
+    init = function()
+      vim.defer_fn(function()
+        theAnimation(theAnimation)
+      end, 100)
+    end,
 
     ---@type snacks.Config
     opts = {
@@ -56,41 +117,53 @@ return {
 
       -- DASHBOARD
       dashboard = {
+
         preset = {
           -- Go see the theme in `lua/plugins/theme.lua` to change the color of the header
-          header = [[
-⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣴⡖ ⠀⢀⠀⠀⠀⠀ ⠀⠀⠀⠀⠀ ⠀
-⠀⠀⠀⠀⠀⠀⠀⠀⠈⢆⠀⠀⠀ ⣹⣷ ⣀⣴⠀⢀⣤⣶⡦⡀⠀⠀⠀⠀ ⠀
-⠢⣀⠀⠀⠀⠀⠀⢄⠀⠈⣆⣠⣼⣿⣿⣿⣿⣿⣿⣦⣼⣏⠀⠀⠀⠀⠀⠀  ⠀
-⠀⠈⠻⣶⣄⡀⠀⣨⣷⡿⠟⠋⠉⠉  ⠉⠉⠉⠛⠿⣿⣦⣀⠀⠀⠀⠀⠀ ⠀
-⠀⠀⠀⠀⠙⢿⣿⡿⠋⠀⠀⠀⠀ ⢠⡄⠀ ⠀⠀ ⠈⢿⣿⣏⢀⡀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⣼⡟⠀⠀⠀⠀⠀ ⣠⣿⣿⣆ ⠀⠀⠀⠀⠈⢿⣿⡁ ⣁⡀⠀⠀
-⠀⠀⠀⠒⢺⣿⠁⠀⠀⠀⠀ ⡰⠿⠿⠿⠿⢆⠀ ⠀⠀⠀⠸⣿⡿⠛⠉⠀⠀⠀
-⠀⠀⢀⢠⣾⣿⠀⠀⠀⠀ ⣴⣷⡀⠀⠀⢀⣾⣦⠀⠀ ⠀⠀⣿⣿⡦⠀⠀⠀⠀
-⠀⠀⠀⠀⣹⣿⠀⠀⠀ ⣼⣿⣿⣷⡀⢀⣾⣿⣿⣧  ⠀⢠⣿⡧⠤ ⠀⠀⠀
-⠀⠀⠀⠈⠛⢿⣆⠀ ⠈⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠁ ⠀⣼⡿⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠻⣿⣦⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀  ⠀⢀⣾⣿⣷⣄⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠚⢻⣿⣿⣦⣄⡀⠀⠀⠀⠀  ⢀⣠⣶⣿⡋⠀⠈⠙⠻⣄⠀⠀ 
-⠀⠀⠀⠀⠀⠀⠀⢀⣿⠿⢿⣿⣿⣿⣶⣶⣿⡿⠻⣏⠀⠛⠄⠀⠀⠀⠀⠈⠃⠄ 
-⠀⠀⠀⠀⠀ ⡰⠛ ⠀⠸⠋⠻⣿⣁⠀⠁⠀⠀⠈⠀  ⠀⠀⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡿⠉⠀⠀⠀⠀⠀⠀⠀⠀  ⠀⠀⠀⠀⠀⠀
-
-]],
+          header = false,
           ---@type fun(cmd:string, opts:table)|nil
           pick = nil,
           ---@type snacks.dashboard.Item[]
           keys = {
-            -- stylua: ignore
-            { icon = " ", key = "p", desc = "Projects", action = function() Snacks.picker.projects({ sort = { fields = { "time:asc", "idx" } } }) end, },
-            { icon = " ", key = "s", desc = "Restore Session", section = "session" },
-            -- stylua: ignore
-            { icon = " ", key = "c", desc = "Config", action = function () Snacks.dashboard.pick('files', {cwd = vim.fn.stdpath('config')}) end, },
+            {
+              icon = " ",
+              key = "p",
+              desc = "Projects",
+              action = function()
+                Snacks.picker.projects({ sort = { fields = { "time:asc", "idx" } } })
+                shouldPlayAnimation = false
+              end,
+            },
+            {
+              icon = " ",
+              key = "s",
+              desc = "Restore Session",
+              action = function()
+                require("persistence").load({ last = true })
+                shouldPlayAnimation = false
+              end,
+            },
+            {
+              icon = " ",
+              key = "c",
+              desc = "Config",
+              action = function()
+                Snacks.dashboard.pick("files", { cwd = vim.fn.stdpath("config") })
+                shouldPlayAnimation = false
+              end,
+            },
             { icon = "󰒲 ", key = "L", desc = "Lazy", action = ":Lazy", enabled = package.loaded.lazy ~= nil },
             { icon = " ", key = "q", desc = "Quit", action = ":qa" },
           },
         },
         sections = {
-          { section = "header" },
+          {
+            section = "header",
+            padding = 1,
+            function()
+              return { header = asciiImg }
+            end,
+          },
           { section = "keys", gap = 1, padding = 1 },
           { section = "startup", enabled = false },
         },
