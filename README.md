@@ -13,9 +13,7 @@ First, refer to the [documentation](https://lazyvim.github.io/installation) to g
 
 Then clone it: `git clone https://github.com/t1gu1/lazyvim-config ~/.config/nvim`
 
-<video src="./triforce-nvim-dashboard.mp4" controls width="640" height="360">
-  ![image](https://github.com/user-attachments/assets/d862341f-7b41-4326-95e7-1acf99206b6e)
-</video>
+https://github.com/user-attachments/assets/ada5e607-5871-4061-961d-4ae4fba76211
 
 ## Pre-requise
 
