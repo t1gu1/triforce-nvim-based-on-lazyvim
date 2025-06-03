@@ -1,10 +1,11 @@
 # ꧁ ༺ Triforce Nvim ༻ ꧂
 
 <!--toc:start-->
+
 - [꧁ ༺ Triforce Nvim ༻ ꧂](#triforce-nvim)
   - [What I customized](#what-i-customized)
   - [Preview](#preview)
-<!--toc:end-->
+  <!--toc:end-->
 
 A nice configuration based on 💤[LazyVim](https://github.com/LazyVim/LazyVim).
 
@@ -12,9 +13,12 @@ First, refer to the [documentation](https://lazyvim.github.io/installation) to g
 
 Then clone it: `git clone https://github.com/t1gu1/lazyvim-config ~/.config/nvim`
 
-![image](https://github.com/user-attachments/assets/d862341f-7b41-4326-95e7-1acf99206b6e)
+<video src="./triforce-nvim-dashboard.mp4" controls width="640" height="360">
+  ![image](https://github.com/user-attachments/assets/d862341f-7b41-4326-95e7-1acf99206b6e)
+</video>
 
 ## Pre-requise
+
 - Use one of those recommended terminal if you want to see **images**
   - Ghostty
   - Kitty
@@ -143,5 +147,3 @@ Adjusted to use shadow text with full Copilot suggestion available (previously l
 ![image](https://github.com/user-attachments/assets/296b1cd2-b8f2-43e8-89dd-d5f2c1011ac9)
 
 ![image](https://github.com/user-attachments/assets/75bf6e30-3e85-4bf1-a8bc-075051331419)
-
-
