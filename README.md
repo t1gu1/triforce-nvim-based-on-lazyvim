@@ -13,7 +13,7 @@ First, refer to the [documentation](https://lazyvim.github.io/installation) to g
 
 Then clone it: `git clone https://github.com/t1gu1/lazyvim-config ~/.config/nvim`
 
-https://github.com/user-attachments/assets/ada5e607-5871-4061-961d-4ae4fba76211
+<https://github.com/user-attachments/assets/ada5e607-5871-4061-961d-4ae4fba76211>
 
 ## Pre-requise
 
