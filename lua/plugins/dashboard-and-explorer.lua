@@ -165,6 +165,8 @@ local frames = {
 ]],
 }
 
+local asciiImg = frames[1]
+
 local function ascii(counting, callback)
   if not shouldPlayAnimation then
     return
@@ -172,9 +174,6 @@ local function ascii(counting, callback)
 
   -- local frameCount = #frames < math.floor(counting) and frames[#frames] or frames[math.floor(counting)]
   asciiImg = #frames < math.floor(counting) and frames[#frames] or frames[math.floor(counting)]
-
-  asciiImg = string.gsub(asciiImg, "{counting}", tostring(counting))
-
   Snacks.dashboard.update()
 
   print(counting)
@@ -192,6 +191,44 @@ local function theAnimation(callback)
     fps = 60,
   })
 end
+
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = "snacks_dashboard",
+  callback = function()
+    -- Your custom code here that runs when the snacks dashboard filetype is set
+    print("Snacks Dashboard is open!")
+    shouldPlayAnimation = true
+    asciiImg = frames[1]
+  end,
+})
+
+vim.api.nvim_create_autocmd("DirChanged", {
+  pattern = "*", -- Match any directory change
+  callback = function()
+    local new_dir = vim.fn.getcwd()
+
+    -- Same logic as above for project markers
+    local project_markers = { ".git", "package.json", "Cargo.toml", ".project_root" }
+    local is_project_root = false
+
+    for _, marker in ipairs(project_markers) do
+      if vim.fn.findfile(marker, new_dir .. ";") ~= "" then
+        is_project_root = true
+        break
+      end
+    end
+
+    if is_project_root then
+      print("Changed to project directory: " .. new_dir)
+      shouldPlayAnimation = false
+      -- Your custom code here for when you change into a project directory
+    else
+      print("Changed to non-project directory: " .. new_dir)
+      shouldPlayAnimation = false
+      -- Optional: Code for when you leave a project directory
+    end
+  end,
+})
 
 return {
   {
@@ -256,8 +293,11 @@ return {
 
       -- DASHBOARD
       dashboard = {
-
+        on_close = function()
+          shouldPlayAnimation = false
+        end,
         preset = {
+
           -- Go see the theme in `lua/plugins/theme.lua` to change the color of the header
           header = false,
           ---@type fun(cmd:string, opts:table)|nil
@@ -269,7 +309,12 @@ return {
               key = "p",
               desc = "Projects",
               action = function()
-                Snacks.picker.projects({ sort = { fields = { "time:asc", "idx" } } })
+                Snacks.picker.projects({
+                  sort = { fields = { "time:asc", "idx" } },
+                  on_close = function(info)
+                    shouldPlayAnimation = true
+                  end,
+                })
                 shouldPlayAnimation = false
               end,
             },
@@ -287,7 +332,12 @@ return {
               key = "c",
               desc = "Config",
               action = function()
-                Snacks.dashboard.pick("files", { cwd = vim.fn.stdpath("config") })
+                Snacks.dashboard.pick("files", {
+                  cwd = vim.fn.stdpath("config"),
+                  on_close = function(info)
+                    shouldPlayAnimation = true
+                  end,
+                })
                 shouldPlayAnimation = false
               end,
             },
