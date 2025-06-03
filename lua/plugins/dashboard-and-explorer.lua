@@ -188,7 +188,7 @@ local function theAnimation(callback)
   require("snacks").animate(1, #frames + 1, function(value, ctx)
     ascii(value, callback)
   end, {
-    duration = 200,
+    duration = 300,
     fps = 60,
   })
 end
