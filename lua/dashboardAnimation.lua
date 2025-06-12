@@ -216,8 +216,6 @@ M.ascii = function(counting, callback)
   M.asciiImg = #M.frames < math.floor(counting) and M.frames[#M.frames] or M.frames[math.floor(counting)]
   Snacks.dashboard.update()
 
-  -- print(counting)
-
   if counting >= #M.frames + 1 then
     callback(callback)
   end
