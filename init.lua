@@ -15,3 +15,5 @@ vim.filetype.get_option = function(filetype, option)
     return get_option(filetype, option)
   end
 end
+
+vim.opt.relativenumber = false
