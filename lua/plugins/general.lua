@@ -17,16 +17,16 @@ return {
       return opts
     end,
   },
-  -- {
-  --   "zerochae/endpoint.nvim",
-  --   dependencies = {
-  --     "folke/snacks.nvim", -- For snacks picker
-  --   },
-  --   cmd = { "Endpoint" },
-  --   config = function()
-  --     require("endpoint").setup()
-  --   end,
-  -- },
+  {
+    "zerochae/endpoint.nvim",
+    dependencies = {
+      "folke/snacks.nvim", -- For snacks picker
+    },
+    cmd = { "Endpoint" },
+    config = function()
+      require("endpoint").setup()
+    end,
+  },
   {
     "rachartier/tiny-inline-diagnostic.nvim",
     event = "VeryLazy",
