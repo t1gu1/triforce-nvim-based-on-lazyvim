@@ -17,16 +17,16 @@ return {
       return opts
     end,
   },
-  {
-    "zerochae/endpoint.nvim",
-    dependencies = {
-      "folke/snacks.nvim", -- For snacks picker
-    },
-    cmd = { "Endpoint" },
-    config = function()
-      require("endpoint").setup()
-    end,
-  },
+  -- {
+  --   "zerochae/endpoint.nvim",
+  --   dependencies = {
+  --     "folke/snacks.nvim", -- For snacks picker
+  --   },
+  --   cmd = { "Endpoint" },
+  --   config = function()
+  --     require("endpoint").setup()
+  --   end,
+  -- },
   {
     "rachartier/tiny-inline-diagnostic.nvim",
     event = "VeryLazy",
@@ -98,62 +98,62 @@ return {
       },
     },
   },
-  {
-    "CopilotC-Nvim/CopilotChat.nvim",
-    event = "BufEnter",
-    config = function(_, opts)
-      -- Your other CopilotChat config here
-      require("CopilotChat").setup(opts)
-
-      -- Auto-command to remove line numbers from the chat window
-      vim.api.nvim_create_autocmd("BufEnter", {
-        pattern = "copilot-chat",
-        callback = function()
-          vim.opt_local.number = false
-          vim.opt_local.relativenumber = false
-        end,
-      })
-    end,
-    opts = {
-      mappings = {
-        submit_prompt = {
-          normal = "<C-s>",
-          insert = "<C-s>",
-        },
-        accept_diff = {
-          normal = "<C-cr>",
-          insert = "<C-cr>",
-        },
-      },
-      prompts = {
-        -- Complete = {
-        --   prompt = "Try to compplete the code for the selected code.",
-        --   system_prompt = "You are very good at explaining programming code and keepping the code easy to understand.",
-        --   mapping = "<leader>ac",
-        -- },
-      },
-    },
-  },
-  {
-    "zbirenbaum/copilot.lua",
-    opts = {
-      suggestion = {
-        enabled = true, -- Crucial for ghost text
-        auto_trigger = true, -- Copilot suggests as you type
-        keymap = {
-          accept = "<c-cr>", -- Primary key to accept ghost text
-          next = "<c-[>", -- Cycle to the next ghost text suggestion (e.g., Alt + ])
-          prev = "<c-]>", -- Cycle to the previous ghost text suggestion (e.g., Alt + [)
-          accept_word = "<c-w>", -- Accept the next word of the suggestion
-          accept_line = "<c-l>", -- Accept the entire line of the suggestion
-          dismiss = "<c-h>", -- Dismiss the current ghost text suggestion
-        },
-      },
-      panel = {
-        enabled = false, -- Most users prefer inline ghost text over a separate panel
-      },
-    },
-  },
+  -- {
+  --   "CopilotC-Nvim/CopilotChat.nvim",
+  --   event = "BufEnter",
+  --   config = function(_, opts)
+  --     -- Your other CopilotChat config here
+  --     require("CopilotChat").setup(opts)
+  --
+  --     -- Auto-command to remove line numbers from the chat window
+  --     vim.api.nvim_create_autocmd("BufEnter", {
+  --       pattern = "copilot-chat",
+  --       callback = function()
+  --         vim.opt_local.number = false
+  --         vim.opt_local.relativenumber = false
+  --       end,
+  --     })
+  --   end,
+  --   opts = {
+  --     mappings = {
+  --       submit_prompt = {
+  --         normal = "<C-s>",
+  --         insert = "<C-s>",
+  --       },
+  --       accept_diff = {
+  --         normal = "<C-cr>",
+  --         insert = "<C-cr>",
+  --       },
+  --     },
+  --     prompts = {
+  --       -- Complete = {
+  --       --   prompt = "Try to compplete the code for the selected code.",
+  --       --   system_prompt = "You are very good at explaining programming code and keepping the code easy to understand.",
+  --       --   mapping = "<leader>ac",
+  --       -- },
+  --     },
+  --   },
+  -- },
+  -- {
+  --   "zbirenbaum/copilot.lua",
+  --   opts = {
+  --     suggestion = {
+  --       enabled = true, -- Crucial for ghost text
+  --       auto_trigger = true, -- Copilot suggests as you type
+  --       keymap = {
+  --         accept = "<c-cr>", -- Primary key to accept ghost text
+  --         next = "<c-[>", -- Cycle to the next ghost text suggestion (e.g., Alt + ])
+  --         prev = "<c-]>", -- Cycle to the previous ghost text suggestion (e.g., Alt + [)
+  --         accept_word = "<c-w>", -- Accept the next word of the suggestion
+  --         accept_line = "<c-l>", -- Accept the entire line of the suggestion
+  --         dismiss = "<c-h>", -- Dismiss the current ghost text suggestion
+  --       },
+  --     },
+  --     panel = {
+  --       enabled = false, -- Most users prefer inline ghost text over a separate panel
+  --     },
+  --   },
+  -- },
   -- Remove copilot from the sources in blick (I prefer the ghost text)
   {
     "saghen/blink.cmp",
