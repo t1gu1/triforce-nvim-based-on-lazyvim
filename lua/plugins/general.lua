@@ -36,6 +36,7 @@ return {
       vim.diagnostic.config({ virtual_text = false }) -- Disable default virtual text
     end,
   },
+  { "tamton-aquib/keys.nvim" },
   {
     "piersolenski/wtf.nvim",
     dependencies = {
