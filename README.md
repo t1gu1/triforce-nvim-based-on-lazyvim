@@ -11,7 +11,7 @@ A nice configuration based on 💤[LazyVim](https://github.com/LazyVim/LazyVim).
 
 First, refer to the [documentation](https://lazyvim.github.io/installation) to get started and get info of what i don't customized!
 
-Then clone it: `git clone https://github.com/t1gu1/lazyvim-config ~/.config/nvim`
+Then clone it: `git clone git@github.com:t1gu1/triforce-nvim-based-on-lazyvim.git ~/.config/nvim`
 
 <https://github.com/user-attachments/assets/ada5e607-5871-4061-961d-4ae4fba76211>
 
