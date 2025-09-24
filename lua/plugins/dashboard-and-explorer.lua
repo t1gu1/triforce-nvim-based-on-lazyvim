@@ -1,39 +1,28 @@
 local dbAnim = require("dashboardAnimation")
 
+-- local function is_project_root(dir)
+--   local markers = { ".git", "package.json", "Cargo.toml", ".project_root" }
+--   for _, marker in ipairs(markers) do
+--     if vim.fn.findfile(marker, dir .. ";") ~= "" then
+--       return true
+--     end
+--   end
+--   return false
+-- end
+
 vim.api.nvim_create_autocmd("FileType", {
   pattern = "snacks_dashboard",
   callback = function()
-    -- Your custom code here that runs when the snacks dashboard filetype is set
     dbAnim.shouldPlayAnimation = true
     dbAnim.asciiImg = dbAnim.frames[1]
   end,
 })
 
 vim.api.nvim_create_autocmd("DirChanged", {
-  pattern = "*", -- Match any directory change
+  pattern = "*",
   callback = function()
-    local new_dir = vim.fn.getcwd()
-
-    -- Same logic as above for project markers
-    local project_markers = { ".git", "package.json", "Cargo.toml", ".project_root" }
-    local is_project_root = false
-
-    for _, marker in ipairs(project_markers) do
-      if vim.fn.findfile(marker, new_dir .. ";") ~= "" then
-        is_project_root = true
-        break
-      end
-    end
-
-    if is_project_root then
-      -- print("Changed to project directory: " .. new_dir)
-      dbAnim.shouldPlayAnimation = false
-      -- Your custom code here for when you change into a project directory
-    else
-      -- print("Changed to non-project directory: " .. new_dir)
-      dbAnim.shouldPlayAnimation = false
-      -- Optional: Code for when you leave a project directory
-    end
+    dbAnim.shouldPlayAnimation = false
+    -- Optionally, you can use is_project_root(vim.fn.getcwd()) if you want to check and act differently
   end,
 })
 
@@ -50,23 +39,23 @@ return {
     opts = {
       image = { enabled = true },
 
-      -- Terminal
       terminal = {
         win = {
           keys = {
             exit = { "<ESC>", "<cmd>q<cr>", desc = "Exit", expr = true, mode = { "t", "n" } },
             term_normal = {
               "<c-/>",
-              function(self)
+              function()
                 vim.cmd("stopinsert")
-
-                ---@diagnostic disable-next-line: undefined-field
                 local timer = vim.loop.new_timer()
-                local start_up_func = function()
-                  vim.api.nvim_feedkeys("/", "n", true)
-                end
-                if timer ~= nil then
-                  timer:start(10, 0, vim.schedule_wrap(start_up_func))
+                if timer then
+                  timer:start(
+                    10,
+                    0,
+                    vim.schedule_wrap(function()
+                      vim.api.nvim_feedkeys("/", "n", true)
+                    end)
+                  )
                 end
               end,
               mode = { "t", "n" },
@@ -84,7 +73,6 @@ return {
         },
       },
 
-      -- EXPLORER MENU
       picker = {
         sources = {
           explorer = {
@@ -98,18 +86,13 @@ return {
         },
       },
 
-      -- DASHBOARD
       dashboard = {
         on_close = function()
           dbAnim.shouldPlayAnimation = false
         end,
         preset = {
-
-          -- Go see the theme in `lua/plugins/theme.lua` to change the color of the header
           header = false,
-          ---@type fun(cmd:string, opts:table)|nil
           pick = nil,
-          ---@type snacks.dashboard.Item[]
           keys = {
             {
               icon = " ",
@@ -118,7 +101,7 @@ return {
               action = function()
                 Snacks.picker.projects({
                   sort = { fields = { "time:asc", "idx" } },
-                  on_close = function(info)
+                  on_close = function()
                     dbAnim.shouldPlayAnimation = true
                   end,
                 })
@@ -141,7 +124,7 @@ return {
               action = function()
                 Snacks.dashboard.pick("files", {
                   cwd = vim.fn.stdpath("config"),
-                  on_close = function(info)
+                  on_close = function()
                     dbAnim.shouldPlayAnimation = true
                   end,
                 })
